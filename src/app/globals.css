@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #000;
+  --swiper-navigation-sides-offset: 30%;
+  --swiper-navigation-color: white;
+  --swiper-navigation-top-offset: calc(50% - 80px);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body);
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0.05;
+  }
+  .swiper-slide.swiper-slide-prev,
+  .swiper-slide.swiper-slide-next {
+    opacity: 0.3;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+}
