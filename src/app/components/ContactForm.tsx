@@ -1,8 +1,8 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "@/app/utils/sendEmail";
+import { sendEmail } from "@/utils/sendEmail";
 
 export type FormData = {
   name: string;
@@ -11,7 +11,7 @@ export type FormData = {
 };
 
 const Contact: FC = () => {
-  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  //   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const { register, handleSubmit } = useForm<FormData>();
 
   function onSubmit(data: FormData) {

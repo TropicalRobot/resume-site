@@ -1,24 +1,24 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import clsx from "clsx";
 import SectionHeader from "./SectionHeader";
 
-interface ContentSectionProps {
+type ContentSectionProps = {
   className?: string;
   contentAlign: "left" | "right";
-  headerJustfiy?: "start" | "center" | "end";
+  headerJustify?: "start" | "center" | "end";
   heading: string;
   intro?: string;
   children: ReactNode;
-}
+};
 
-export default function ContentSection({
+const ContentSection: React.FC<ContentSectionProps> = ({
   className,
   contentAlign = "left",
-  headerJustfiy = "start",
+  headerJustify = "start",
   heading,
   intro,
   children,
-}: ContentSectionProps) {
+}) => {
   return (
     <section className={clsx(className)}>
       <div className="container mx-auto py-12">
@@ -31,7 +31,7 @@ export default function ContentSection({
             )}
           >
             <SectionHeader
-              headerJustfiy={headerJustfiy}
+              headerJustify={headerJustify}
               heading={heading}
               intro={intro}
             />
@@ -49,4 +49,6 @@ export default function ContentSection({
       </div>
     </section>
   );
-}
+};
+
+export default ContentSection;

@@ -1,12 +1,12 @@
-import { ContactForm } from '@/app/templates/ContactForm';
-import { Resend } from 'resend';
+// import { ContactForm } from '@/templates/ContactForm';
+// import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
     try {
 
-        let formData = await request.json();
+        const formData = await request.json();
      
         if (!formData.name) {
           return Response.json({ error: 'Name is required' }, { status: 400 });

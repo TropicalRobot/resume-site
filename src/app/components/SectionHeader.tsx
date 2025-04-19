@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 import clsx from "clsx";
 
 interface SectionHeaderProps {
   className?: string;
   justify?: "start" | "center" | "end";
+  headerJustify?: "start" | "center" | "end";
   heading: string;
   intro?: string;
 }
@@ -15,7 +16,7 @@ export default function SectionHeader({
   intro = "",
 }: SectionHeaderProps) {
   return (
-    <div className={clsx(className, `flex flex-col items-${justify}`)}>
+    <div className={clsx(className, "flex flex-col", `items-${justify}`)}>
       <h2 className="text-desktop-heading-1-sm mb-4 pb-2 border-b-[3px] border-teal">
         {heading}
       </h2>

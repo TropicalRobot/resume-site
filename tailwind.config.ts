@@ -24,18 +24,22 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
-                'blue-dark': "#0B1522",
+                'blue-dark': "#01010D",
                 'yellow': '#FECC2D',
                 'teal': 'oklch(75.3% 0.1231 192.85)',
                 'red': '#FD3D39',
                 'cream': '#FCF8F4',
                 'white': '#FFFFFF',
                 'black': '#000000',
+                'slate': {
+                    900: '#263238',
+                }
             },
             fontSize: {
                 'desktop-heading-1-sm': ['52px', 'normal'],
                 'desktop-heading-1': ['64px', 'normal'],
                 'desktop-heading-0': ['130px', '140px']
+        
             },
             lineHeight: {
                 base: '1',

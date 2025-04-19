@@ -1,5 +1,6 @@
 import Image from "next/image";
-import SVGIcon from "@/app/components/SVGIcon";
+import GithubIcon from "@/images/icons/github.svg";
+import LinkedInIcon from "@/images/icons/linkedIn.svg";
 
 export default function SiteHeader({}) {
   return (
@@ -18,7 +19,7 @@ export default function SiteHeader({}) {
         </div>
 
         <div className="flex items-center">
-          <nav className="flex items-center justify-center space-x-10 mr-12">
+          <nav className="flex items-center justify-center space-x-10 mr-10">
             <a href="#" className="text-lg font-bold">
               Home
             </a>
@@ -37,10 +38,10 @@ export default function SiteHeader({}) {
               href="https://www.linkedin.com/in/ryan-griffiths-04649075/"
               target="_blank"
             >
-              <SVGIcon name="linkedIn" className="" size={43} />
+              <LinkedInIcon className="fill-black w-10 h-10" />
             </a>
             <a href="https://github.com/TropicalRobot" target="_blank">
-              <SVGIcon name="github" className="" size={43} />
+              <GithubIcon className="fill-black w-10 h-10" />
             </a>
           </div>
         </div>
