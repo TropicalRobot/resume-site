@@ -5,6 +5,7 @@ import { ooohBaby, notoSans, raleway } from "./fonts";
 import SiteHeader from "./components/layout/SiteHeader";
 import SiteFooter from "./components/layout/SiteFooter";
 import clsx from "clsx";
+import { MobileMenuProvider } from "@/providers/MobileMenuProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,18 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={clsx(
-          ooohBaby.variable,
-          notoSans.variable,
-          raleway.variable,
-          "antialiased"
-        )}
-      >
-        <SiteHeader />
-        {children}
-        <SiteFooter />
-      </body>
+      <MobileMenuProvider>
+        <body
+          className={clsx(
+            ooohBaby.variable,
+            notoSans.variable,
+            raleway.variable,
+            "antialiased"
+          )}
+        >
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </body>
+      </MobileMenuProvider>
     </html>
   );
 }

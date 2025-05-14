@@ -2,15 +2,16 @@ import React from "react";
 import ContactForm from "@/components/ContactForm";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
+import GridRow from "@/components/layout/GridRow";
 
 const ContactSection = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white relative">
       <div className="container mx-auto py-12">
-        <div className="grid grid-cols-2 gap-20">
-          <div className="flex flex-col gap-5">
+        <GridRow>
+          <div className="flex flex-col gap-5 col-span-4 lg:col-span-6">
             <SectionHeader
-              className="mb-5 max-w-[80%]"
+              className="mb-5 lg:max-w-[80%]"
               heading="Let’s Talk"
               justify="start"
               intro="Morbi rutrum, nulla ac laoreet feugiat, magna lacus luctus elit,
@@ -19,7 +20,7 @@ const ContactSection = () => {
 
             <ContactForm />
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end col-span-4 lg:col-span-6">
             <Image
               src="/images/face-to-face.svg"
               alt="Face to Face"
@@ -27,7 +28,7 @@ const ContactSection = () => {
               height={365}
             />
           </div>
-        </div>
+        </GridRow>
       </div>
     </section>
   );

@@ -6,13 +6,13 @@ const WorkSection: React.FC = () => {
   return (
     <section className="bg-blue-dark text-white py-20 relative">
       <div className="border-solid border-t-white border-b-0 border-l-0 border-r-[100vw] border-t-[60px] border-transparent absolute w-full left-0 top-0"></div>
-
       <SectionHeader
-        className="mb-20"
+        className="container mb-10 lg:mb-20"
         heading="My Work"
         justify="center"
         intro="Some projects I've loved working on over the past 11 years"
       />
+
       <div className="flex flex-col gap-4 bg-blue-dark">
         <CaseStudy
           projectName="The Chemical Brothers"

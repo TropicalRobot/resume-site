@@ -21,12 +21,18 @@ export default function ServicesSlider() {
         loop={false}
         pagination
         spaceBetween={0}
-        slidesPerView={3}
+        slidesPerView={1}
         navigation
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
         centeredSlides={true}
         initialSlide={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+
         // coverflowEffect={{
         //   rotate: 0,
         //   stretch: "60%",
@@ -64,7 +70,7 @@ export default function ServicesSlider() {
                 className="mx-auto mb-12 w-4/5"
                 src="/images/programmer-bro.svg"
                 width={400}
-                height={200}
+                height={242}
                 alt="Picture of the author"
               />
               <div className="px-20">

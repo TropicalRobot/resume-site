@@ -36,10 +36,10 @@ export default {
                 }
             },
             fontSize: {
-                'desktop-heading-1-sm': ['52px', 'normal'],
+                'desktop-heading-0': ['130px', '140px'],
                 'desktop-heading-1': ['64px', 'normal'],
-                'desktop-heading-0': ['130px', '140px']
-        
+                'desktop-heading-0-sm': ['48px', '50px'],
+                'desktop-heading-1-sm': ['32px', 'normal']
             },
             lineHeight: {
                 base: '1',
