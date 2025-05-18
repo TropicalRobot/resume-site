@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import SectionHeader from "@/components/SectionHeader";
-import Testimonial from "@/components/Testimonial";
-import HorizontalScrollCarousel from "@/components/HorizontalScrollCarousel";
+import SectionHeader from "../SectionHeader";
+import Testimonial from "../Testimonial";
+import HorizontalScrollCarousel from "../HorizontalScrollCarousel";
 
 const TestimonialsSection: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const TestimonialsSection: React.FC = () => {
         heading="Client Testimonials"
         className="container mb-12"
       />
-      <HorizontalScrollCarousel>
+      <HorizontalScrollCarousel inputRange={["0%", "-90%"]}>
         <Testimonial
           quote="Ryan was the lead / technical Director of all Oliver's Travels projects for several years. Pretty sensational tech execution every time, delivering improved UX across booking system and website. Really nice chap to boot.</p><p>His contributions have left a lasting positive impact.</p>"
           companyName="Oliver's Travels"

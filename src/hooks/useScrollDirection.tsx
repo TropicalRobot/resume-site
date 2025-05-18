@@ -35,5 +35,9 @@ export function useScrollDirection({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [tolerance, topSafeZone]);
 
-  return scrollDirection;
+  const forceDirection = (dir: "up" | "down") => {
+    setScrollDirection(dir);
+  };
+
+  return { scrollDirection, forceDirection };
 }

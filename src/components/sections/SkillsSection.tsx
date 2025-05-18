@@ -1,6 +1,6 @@
 import React from "react";
-import SkillLogo from "@/components/SkillLogo";
-import SectionHeader from "@/components/SectionHeader";
+import SkillLogo from "../SkillLogo";
+import SectionHeader from "../SectionHeader";
 
 const SkillsSection: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const SkillsSection: React.FC = () => {
         <SkillLogo image="/images/logos/nextjs-logo.svg" heading="NextJS" />
         <SkillLogo image="/images/logos/vuejs-logo.svg" heading="VueJS" />
         <SkillLogo
-          image="/images/logos/HTML5-badge.svg"
+          image="/images/logos/tailwind-css-logo.svg"
           heading="Tailwind CSS"
         />
         <SkillLogo image="/images/logos/laravel-logo.svg" heading="Laravel" />

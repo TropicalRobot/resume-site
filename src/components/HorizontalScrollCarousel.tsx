@@ -2,22 +2,23 @@
 
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import QuoteMarkIcon from "@/images/icons/quoteMark.svg";
 import Image from "next/image";
 
 type HorizontalScrollCarouselProps = {
   children: React.ReactNode;
+  inputRange?: string[];
 };
 
 const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
   children,
+  inputRange = ["0%", "-100%"],
 }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], inputRange);
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
@@ -37,7 +38,6 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
         >
           {children}
         </motion.div>
-        {/* <QuoteMarkIcon className="fill-[#c7eeee] w-[1000px] h-[400px] absolute -right-[20%] bottom-0 rotate-180 opacity-40" /> */}
       </div>
     </section>
   );

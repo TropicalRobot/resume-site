@@ -2,9 +2,12 @@
 
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ScrollDownArrow from "@/components/ScrollDownArrow";
+import { useScrollTo } from "@/providers/ScrollProvider";
 
 const Hero: React.FC = () => {
   const { scrollY } = useScroll(); // Get the scroll position (vertical)
+  const { scrollTo } = useScrollTo();
 
   const translateHeroY = useTransform(scrollY, [0, 1000], [0, -600]);
   // when scrollY goes from 0px to 2000px, move from 0px to 200px
@@ -60,6 +63,19 @@ const Hero: React.FC = () => {
             </motion.h2>
           </div>
           {/* <p className="text-xl mt-2 ml-2">Based in Brighton, UK</p> */}
+        </div>
+        <div className="absolute bottom-14 left-1/2 right-1/2">
+          <motion.button
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              y: { duration: 0.6, ease: "easeOut", delay: 1 },
+              opacity: { duration: 0.6, ease: "easeOut", delay: 1 },
+            }}
+            onClick={() => scrollTo("about")}
+          >
+            <ScrollDownArrow className="max-lg:hidden" />
+          </motion.button>
         </div>
       </motion.div>
       <div className="absolute -bottom-[50px] w-full h-[50px] shadow-[0_-10px_8px_-6px_rgb(0,0,0,0.1)]"></div>

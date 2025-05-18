@@ -3,6 +3,7 @@
 import Image from "next/image";
 import GithubIcon from "@/images/icons/github.svg";
 import LinkedInIcon from "@/images/icons/linkedIn.svg";
+import Link from "next/link";
 import {
   useMobileMenuToggle,
   useMobileMenuContext,
@@ -10,17 +11,21 @@ import {
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { useScrollTo } from "@/providers/ScrollProvider";
 
 export default function SiteHeader({}) {
-  const toggleMobileMenu = useMobileMenuToggle();
+  const { forceDirection, scrollDirection } = useScrollDirection({
+    tolerance: 100,
+  });
+  const { scrollTo } = useScrollTo();
+  const toggleMobileMenu = useMobileMenuToggle(forceDirection);
   const { showMobileMenu } = useMobileMenuContext();
-  const scrollDirection = useScrollDirection({ tolerance: 100 }); // 100px tolerance
 
   return (
     <>
       <motion.header
         animate={{
-          y: scrollDirection === "down" ? -100 : 0,
+          y: scrollDirection === "down" && !showMobileMenu ? -100 : 0,
         }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         className={clsx(
@@ -34,7 +39,8 @@ export default function SiteHeader({}) {
           )}
         >
           <div className="flex items-center">
-            <div
+            <Link
+              href="/"
               className={clsx(
                 "w-[42px] h-[42px] rounded-full bg-[#FFB69D] overflow-hidden transition-transform duration-300",
                 showMobileMenu && "-rotate-90"
@@ -44,9 +50,9 @@ export default function SiteHeader({}) {
                 src="/images/avatar.jpg"
                 width={42}
                 height={42}
-                alt="Picture of the author"
+                alt="Profile picture of Ryan Griffiths"
               />
-            </div>
+            </Link>
             <div className="ml-4 font-script text-2xl">Ryan G</div>
           </div>
 
@@ -65,20 +71,29 @@ export default function SiteHeader({}) {
 
           <div
             className={clsx(
-              "max-lg:hidden max-lg:fixed lg:flex lg:items-center max-lg:h-svh max-lg:-top-[17px] max-lg:-left-[43px] max-lg:-right-[43px]"
+              "relative max-lg:hidden max-lg:fixed lg:flex lg:items-center max-lg:h-svh max-lg:-top-[17px] max-lg:-left-[43px] max-lg:-right-[43px]"
               // !showMobileMenu && "hidden"
             )}
           >
             <nav className="flex max-lg:flex-col items-center justify-center gap-4 lg:gap-10 lg:mr-10 max-lg:py-10">
-              <a href="#" className="text-lg font-bold">
+              <button
+                className="text-lg font-bold"
+                onClick={() => scrollTo("about")}
+              >
                 About
-              </a>
-              <a href="#" className="text-lg font-bold">
+              </button>
+              <button
+                className="text-lg font-bold"
+                onClick={() => scrollTo("work")}
+              >
                 Work
-              </a>
-              <a href="#" className="text-lg font-bold">
+              </button>
+              <button
+                className="text-lg font-bold"
+                onClick={() => scrollTo("contact")}
+              >
                 Contact
-              </a>
+              </button>
             </nav>
             <div className="flex items-center space-x-2">
               <a

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import clsx from "clsx";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "@/components/SectionHeader";
 import GridRow from "@/components/layout/GridRow";
 
 type ContentSectionProps = {

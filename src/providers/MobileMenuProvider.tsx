@@ -33,12 +33,17 @@ export const useMobileMenuContext = () => {
   return context;
 };
 
-export const useMobileMenuToggle = () => {
+export const useMobileMenuToggle = (
+  forceDirection?: (dir: "up" | "down") => void
+) => {
   const { showMobileMenu, setShowMobileMenu } = useMobileMenuContext();
 
   const toggleMobileMenu = () => {
-    setShowMobileMenu(!showMobileMenu);
+    const newState = !showMobileMenu;
+    setShowMobileMenu(newState);
+    forceDirection?.("up");
   };
+
   useEffect(() => {
     if (showMobileMenu) {
       document.body.classList.add("overflow-hidden", "h-screen");

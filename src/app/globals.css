@@ -6,6 +6,8 @@
   --background: #fff;
   --foreground: #000;
   --slate-dark: #263238;
+  --teal: oklch(75.3% 0.1231 192.85);
+  --yellow: #fecc2d;
   --swiper-navigation-sides-offset: 20px;
   --swiper-navigation-color: #263238;
   --swiper-navigation-top-offset: calc(50% - 80px);
@@ -22,7 +24,7 @@ body {
   background: var(--background);
   font-family: var(--font-body);
 
-  p:not(:last-child) {
+  p:not([class*="pb-"]):not([class*="px-"]):not(:last-child) {
     margin-bottom: 1.5rem;
   }
   .swiper-button-prev.swiper-button-disabled,
@@ -146,4 +148,25 @@ h6 {
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out,
     transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.highlight {
+  position: relative;
+  font-weight: 600;
+}
+.highlight:after {
+  content: "";
+  background: var(--teal);
+  transform: skew(-15deg, -1deg);
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 1px;
+  left: 0;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.highlight.yellow:after {
+  background: var(--yellow);
 }

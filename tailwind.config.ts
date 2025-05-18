@@ -48,7 +48,7 @@ export default {
                 script: ['var(--font-script)'],
                 heading: ['var(--font-heading)'],
                 body: ['var(--font-body)']
-            },
+            }
         },
     },
     plugins: [
