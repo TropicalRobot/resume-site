@@ -22,13 +22,13 @@ const WorkSection: React.FC = () => {
                     websiteUrl='https://thechemicalbrothers.com/'
                     content={
                         <>
-                            <h4>Overview</h4>
+                            <h3>Overview</h3>
                             <p>
                                 A high-impact promotional website for The Chemical Brothers, built
                                 to support a new album campaign and provide a central hub for music,
                                 news, and tour updates.
                             </p>
-                            <h4>My Role</h4>
+                            <h3>My Role</h3>
                             <p>
                                 I was responsible for the full build of the site using Webflow,
                                 working closely with the designer to bring the visuals to life under
@@ -37,14 +37,14 @@ const WorkSection: React.FC = () => {
                                 meet the deadline.
                             </p>
 
-                            <h4>Outcome</h4>
+                            <h3>Outcome</h3>
                             <p>
                                 Outcome The site launched in sync with a major release, successfully
                                 supporting heavy traffic and providing a smooth experience across
                                 devices. The client appreciated the clean admin interface and speed
                                 of delivery—especially given the compressed timeline.
                             </p>
-                            <h4>Link</h4>
+                            <h3>Link</h3>
                             <p>
                                 <a href='https://thechemicalbrothers.com' target='_blank'>
                                     thechemicalbrothers.com
@@ -59,16 +59,17 @@ const WorkSection: React.FC = () => {
                     projectLogo='/images/portfolio/ot/ot-logo.svg'
                     projectScreenshot='/images/portfolio/ot/ot-screenshot.jpg'
                     projectPoster='/images/portfolio/ot/ot-poster.jpg'
+                    websiteUrl='https://oliverstravels.com'
                     content={
                         <>
-                            <h4>Overview</h4>
+                            <h3>Overview</h3>
                             <p>
                                 A luxury villa rental platform offering handpicked holiday
                                 properties across Europe and beyond. The site serves as both a
                                 high-converting marketing platform and a fully-featured custom
                                 booking system.
                             </p>
-                            <h4>My Role</h4>
+                            <h3>My Role</h3>
                             <p>
                                 Over 11 years, I was deeply involved in the ongoing development and
                                 evolution of the Oliver’s Travels website. I initially worked on
@@ -81,7 +82,7 @@ const WorkSection: React.FC = () => {
                                 introducing a headless WordPress CMS for the first time.
                             </p>
 
-                            <h4>Outcome</h4>
+                            <h3>Outcome</h3>
                             <p>
                                 The site consistently supported year-on-year growth, with major
                                 technical and UX improvements contributing to increased conversions
@@ -89,7 +90,7 @@ const WorkSection: React.FC = () => {
                                 for future scalability while improving editorial flexibility for the
                                 marketing team.
                             </p>
-                            <h4>Link</h4>
+                            <h3>Link</h3>
                             <p>
                                 <a href='https://oliverstravels.com' target='_blank'>
                                     oliverstravels.com
@@ -104,9 +105,10 @@ const WorkSection: React.FC = () => {
                     projectLogo='/images/portfolio/cfs/cfs-logo.svg'
                     projectScreenshot='/images/portfolio/cfs/cfs-screenshot.jpg'
                     projectPoster='/images/portfolio/cfs/cfs-poster.jpg'
+                    websiteUrl='https://cyclingforsofties.com'
                     content={
                         <>
-                            <h4>Overview</h4>
+                            <h3>Overview</h3>
                             <p>
                                 Cycling for Softies is a luxury cycling holiday company offering
                                 curated tours across Europe. The website needed to blend elegant
@@ -114,7 +116,7 @@ const WorkSection: React.FC = () => {
                                 options—while integrating smoothly with the company’s bespoke
                                 booking infrastructure.
                             </p>
-                            <h4>My Role</h4>
+                            <h3>My Role</h3>
                             <p>
                                 I led the development of the website using a hybrid architecture: a
                                 WordPress backend for content management and a Vue.js-powered
@@ -123,7 +125,7 @@ const WorkSection: React.FC = () => {
                                 powers availability, pricing, and booking data across the site.
                             </p>
 
-                            <h4>Outcome</h4>
+                            <h3>Outcome</h3>
                             <p>
                                 The hybrid approach enabled editors to manage content easily while
                                 providing users with a modern, responsive interface. The tight
@@ -131,7 +133,7 @@ const WorkSection: React.FC = () => {
                                 efficiency and a more engaging customer experience—leading to
                                 increased online enquiries.
                             </p>
-                            <h4>Link</h4>
+                            <h3>Link</h3>
                             <p>
                                 <a href='https://cyclingforsofties.com' target='_blank'>
                                     cyclingforsofties.com

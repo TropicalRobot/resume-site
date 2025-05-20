@@ -33,7 +33,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
             <Image
                 className='absolute inset-0 opacity-[12%] w-full h-full object-cover'
                 src={projectPoster}
-                alt=''
+                alt={projectName}
                 width='1200'
                 height='720'
             />
@@ -50,6 +50,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             alt={projectName}
                             width='360'
                             height='100'
+                            sizes='100vw'
                         />
                         <div className='text-lg'>{content}</div>
                     </div>
@@ -63,14 +64,19 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             animate={isInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
                             transition={{ duration: 0.4, ease: 'easeOut' }}
                             className='sticky top-6'>
-                            <a href={websiteUrl} target='_blank' rel='noopener noreferrer'>
+                            <a
+                                href={websiteUrl}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                aria-label={`Visit ${projectName} website`}>
                                 <Image
                                     className='w-full rounded'
                                     src={projectScreenshot}
-                                    alt=''
+                                    alt={`Screenshop of ${projectName}`}
                                     width='360'
                                     height='100'
                                 />
+                                <span className='sr-only'>Visit {projectName} website</span>
                             </a>
                         </motion.div>
                     </div>

@@ -23,10 +23,12 @@ const Hero: React.FC = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6 }}
                 className='object-cover h-full w-full absolute inset-0 bg-gray-400'
-                src='/images/hero.jpg'
+                src='/images/photoshoot-author-2400.avif'
                 width={2400}
                 height={1080}
                 alt='Picture of the author'
+                srcSet='/images/photoshoot-author-720.avif 720w, /images/photoshoot-author-1440.avif 1440w, /images/photoshoot-author-2400.avif 2400w'
+                sizes='100vw'
             />
 
             <motion.div
@@ -68,7 +70,9 @@ const Hero: React.FC = () => {
                             y: { duration: 0.6, ease: 'easeOut', delay: 1 },
                             opacity: { duration: 0.6, ease: 'easeOut', delay: 1 }
                         }}
-                        onClick={() => scrollTo('about')}>
+                        onClick={() => scrollTo('about')}
+                        role='button'
+                        aria-label='Scroll down'>
                         <ScrollDownArrow className='max-lg:hidden' />
                     </motion.button>
                 </div>

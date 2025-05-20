@@ -15,7 +15,7 @@ const ScrollDownArrow: React.FC<ScrollDownArrowProps> = ({ className }) => {
                 <Image
                     className='mb-4 rotate-[45deg]'
                     src='/images/arrow.png'
-                    alt=''
+                    alt='Scroll down'
                     width='50'
                     height='40'
                 />

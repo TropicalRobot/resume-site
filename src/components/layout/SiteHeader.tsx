@@ -56,7 +56,10 @@ export default function SiteHeader({}) {
                             showMobileMenu && 'is-active'
                         )}
                         type='button'
-                        onClick={() => toggleMobileMenu()}>
+                        onClick={() => toggleMobileMenu()}
+                        role='button'
+                        aria-label='Open main menu'
+                        aria-expanded={showMobileMenu}>
                         <span className='hamburger-box mr-2'>
                             <span className='hamburger-inner'></span>
                         </span>
