@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ heading, text, image }) => {
             initial={{ y: 50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.4, ease: 'easeOut' }}>
-            <div className='p-5 rounded-3xl bg-white/50 border-[#efe9dc] border-2 box-shadow-[rgb(239 233 220 / 80%) 0px 0px 30px'>
+            <div className='h-full py-8 px-4 rounded-3xl bg-white/50 border-[#efe9dc] border-2 box-shadow-[rgb(239 233 220 / 80%) 0px 0px 30px'>
                 <div className='flex-col items-center text-center mx-auto relative'>
                     {image?.url && (
                         <Image
