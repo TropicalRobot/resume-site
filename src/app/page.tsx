@@ -12,7 +12,9 @@ export default function Home() {
     return (
         <>
             <main>
-                <Section id='home'>&nbsp;</Section>
+                <Section id='home' className='invisible h-0'>
+                    &nbsp;
+                </Section>
                 <Hero />
                 <div className='mt-[400px] lg:mt-[100vh]'>
                     <Section id='about'>

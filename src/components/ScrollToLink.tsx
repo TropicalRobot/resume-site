@@ -13,7 +13,9 @@ type ScrollToLinkProps = {
 const ScrollToLink: React.FC<ScrollToLinkProps> = ({ className, label, target }) => {
     const { scrollTo } = useScrollTo()
     return (
-        <button className={clsx('text-lg font-bold', className)} onClick={() => scrollTo(target)}>
+        <button
+            className={clsx('text-lg font-bold button-link', className)}
+            onClick={() => scrollTo(target)}>
             {label}
         </button>
     )

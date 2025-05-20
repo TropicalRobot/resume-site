@@ -134,7 +134,7 @@ const ContactForm: React.FC = () => {
                         <button
                             className={clsx(
                                 loading && 'text-red',
-                                'hover:shadow-form rounded-full py-3 px-8 text-base font-semibold outline-none border-2 border-teal ml-2'
+                                'hover:bg-teal hover:bg-opacity-20 focus:bg-teal focus:bg-opacity-20 rounded-full py-3 px-8 text-base font-semibold outline-none border-2 border-teal ml-2'
                             )}>
                             Submit
                         </button>

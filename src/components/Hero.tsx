@@ -32,8 +32,8 @@ const Hero: React.FC = () => {
             <motion.div
                 className='relative container h-full flex-col content-end'
                 style={{ y: translateContentY }}>
-                <div className='pb-8 lg:pb-32'>
-                    <div className='overflow-hidden inline-block pr-2'>
+                <div className='pb-8 lg:pb-32 flex-col'>
+                    <div className='overflow-hidden inline-block pr-2 w-full'>
                         <motion.h1
                             initial={{ y: '100%', opacity: 0 }}
                             animate={{ y: '0%', opacity: 1 }}
@@ -41,11 +41,11 @@ const Hero: React.FC = () => {
                                 y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
                                 opacity: { duration: 0.5, ease: 'easeOut', delay: 0.3 }
                             }}
-                            className='font-script text-[32px] lg:text-[90px] font-normal'>
+                            className='font-script text-[32px] lg:text-[48px] xl:text-[90px] font-normal'>
                             Hi, I&apos;m Ryan
                         </motion.h1>
                     </div>
-                    <div className='overflow-hidden inline-block pr-2'>
+                    <div className='overflow-hidden inline-block pr-2 w-full'>
                         <motion.h2
                             initial={{ y: '120%', opacity: 0 }}
                             animate={{ y: '0%', opacity: 1 }}
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                                 y: { duration: 0.6, ease: 'easeOut', delay: 0.1 },
                                 opacity: { duration: 0.6, ease: 'easeOut', delay: 0.3 }
                             }}
-                            className='uppercase font-heading text-desktop-heading-0-sm lg:text-desktop-heading-0 font-black text-white/70 mb-4 lg:mb-10'>
+                            className='uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70 mb-4 lg:mb-10'>
                             Full Stack
                             <br /> Web Developer
                         </motion.h2>

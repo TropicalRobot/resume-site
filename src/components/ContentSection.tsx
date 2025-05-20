@@ -22,7 +22,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
 }) => {
     return (
         <section className={clsx(className)}>
-            <div className='container mx-auto py-12'>
+            <div className='container mx-auto py-8 lg:py-12'>
                 <GridRow>
                     <div
                         className={clsx(

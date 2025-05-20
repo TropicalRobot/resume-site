@@ -7,8 +7,8 @@ import HorizontalScrollCarousel from '../HorizontalScrollCarousel'
 
 const TestimonialsSection: React.FC = () => {
     return (
-        <section className='bg-cream relative pt-[80px]'>
-            <div className='border-solid border-t-blue-dark border-b-0 border-r-0 border-l-[100vw] border-t-[60px] border-transparent absolute left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.45)]'></div>
+        <section className='bg-cream relative pt-16 lg:pt-[80px]'>
+            <div className='border-solid border-t-blue-dark border-b-0 border-r-0 border-l-[100vw] border-t-[30px] lg:border-t-[60px] border-transparent absolute left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.45)]'></div>
 
             <SectionHeader
                 justify='center'
