@@ -37,9 +37,11 @@ export default {
             },
             fontSize: {
                 'desktop-heading-0': ['130px', '140px'],
+                'tablet-heading-0': ['90px', '100px'],
                 'desktop-heading-1': ['64px', 'normal'],
-                'desktop-heading-0-sm': ['48px', '50px'],
-                'desktop-heading-1-sm': ['32px', 'normal']
+                'tablet-heading-1': ['48px', '50px'],
+                'heading-0': ['48px', '50px'],
+                'heading-1': ['32px', 'normal']
             },
             lineHeight: {
                 base: '1'
@@ -60,7 +62,7 @@ export default {
                         maxWidth: '100%'
                     },
                     '@screen md': {
-                        maxWidth: '100%'
+                        maxWidth: '640px'
                     },
                     '@screen lg': {
                         maxWidth: '100%'
