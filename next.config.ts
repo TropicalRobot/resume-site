@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
     webpack(config) {
@@ -9,12 +9,15 @@ const nextConfig: NextConfig = {
         return config
     },
     turbopack: {
-    // Example: adding an alias and custom file extension
-    resolveAlias: {
-      underscore: 'lodash',
+        // Example: adding an alias and custom file extension
+        resolveAlias: {
+            underscore: 'lodash'
+        },
+        resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json']
     },
-    resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
-  },
-};
+    images: {
+        formats: ['image/avif', 'image/webp']
+    }
+}
 
-export default nextConfig;
+export default nextConfig

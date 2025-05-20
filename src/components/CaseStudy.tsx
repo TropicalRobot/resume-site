@@ -33,7 +33,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
             <Image
                 className='absolute inset-0 opacity-[12%] w-full h-full object-cover'
                 src={projectPoster}
-                alt=''
+                alt={projectName}
                 width='1200'
                 height='720'
             />
@@ -50,6 +50,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             alt={projectName}
                             width='360'
                             height='100'
+                            sizes='100vw'
                         />
                         <div className='text-lg'>{content}</div>
                     </div>
@@ -67,7 +68,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                                 <Image
                                     className='w-full rounded'
                                     src={projectScreenshot}
-                                    alt=''
+                                    alt={`Screenshop of ${projectName}`}
                                     width='360'
                                     height='100'
                                 />
