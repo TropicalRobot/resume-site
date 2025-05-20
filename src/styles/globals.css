@@ -183,11 +183,11 @@ p a:hover:after {
     height: 100%;
 }
 
-button {
+.button-link {
     position: relative;
 }
 
-button:after {
+.button-link:after {
     content: '';
     position: absolute;
     left: 50%;
@@ -200,7 +200,7 @@ button:after {
     transition: transform 0.15s ease;
 }
 
-button:hover:after,
-button:focus:after {
+.button-link:hover:after,
+.button-link:focus:after {
     transform: translateX(-50%) scaleX(1);
 }

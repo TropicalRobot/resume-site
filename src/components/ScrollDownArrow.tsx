@@ -10,7 +10,7 @@ type ScrollDownArrowProps = {
 
 const ScrollDownArrow: React.FC<ScrollDownArrowProps> = ({ className }) => {
     return (
-        <div className={clsx(className)}>
+        <div className={clsx('button-link', className)}>
             <div className='relative flex justify-center'>
                 <Image
                     className='mb-4 rotate-[45deg]'
