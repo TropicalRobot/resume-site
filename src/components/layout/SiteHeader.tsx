@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import GithubIcon from '@/images/icons/github.svg'
 import LinkedInIcon from '@/images/icons/linkedIn.svg'
-import Link from 'next/link'
 import { useMobileMenuToggle, useMobileMenuContext } from '@/providers/MobileMenuProvider'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
