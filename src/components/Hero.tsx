@@ -70,7 +70,9 @@ const Hero: React.FC = () => {
                             y: { duration: 0.6, ease: 'easeOut', delay: 1 },
                             opacity: { duration: 0.6, ease: 'easeOut', delay: 1 }
                         }}
-                        onClick={() => scrollTo('about')}>
+                        onClick={() => scrollTo('about')}
+                        role='button'
+                        aria-label='Scroll down'>
                         <ScrollDownArrow className='max-lg:hidden' />
                     </motion.button>
                 </div>

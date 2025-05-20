@@ -17,6 +17,7 @@ const FormInput: React.FC<FormInputProps> = ({
                 {validation?.required == true && <span className='text-red font-sans ml-1'>*</span>}
             </label>
             <textarea
+                id={id}
                 rows='8'
                 placeholder={placeholder}
                 className={clsx(

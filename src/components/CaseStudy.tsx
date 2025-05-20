@@ -64,7 +64,11 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             animate={isInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
                             transition={{ duration: 0.4, ease: 'easeOut' }}
                             className='sticky top-6'>
-                            <a href={websiteUrl} target='_blank' rel='noopener noreferrer'>
+                            <a
+                                href={websiteUrl}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                aria-label={`Visit ${projectName} website`}>
                                 <Image
                                     className='w-full rounded'
                                     src={projectScreenshot}
@@ -72,6 +76,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                                     width='360'
                                     height='100'
                                 />
+                                <span className='sr-only'>Visit {projectName} website</span>
                             </a>
                         </motion.div>
                     </div>
