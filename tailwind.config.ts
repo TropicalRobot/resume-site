@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 import screens from './tailwind.screens'
 
 export default {
     content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx}'
     ],
     theme: {
         screens: screens,
@@ -22,17 +22,17 @@ export default {
         },
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-                'blue-dark': "#01010D",
-                'yellow': '#FECC2D',
-                'teal': 'oklch(75.3% 0.1231 192.85)',
-                'red': '#FD3D39',
-                'cream': '#FCF8F4',
-                'white': '#FFFFFF',
-                'black': '#000000',
-                'slate': {
-                    900: '#263238',
+                background: 'var(--background)',
+                foreground: 'var(--foreground)',
+                'blue-dark': '#01010D',
+                yellow: '#FECC2D',
+                teal: 'oklch(75.3% 0.1231 192.85)',
+                red: '#FD3D39',
+                cream: '#FCF8F4',
+                white: '#FFFFFF',
+                black: '#000000',
+                slate: {
+                    900: '#263238'
                 }
             },
             fontSize: {
@@ -42,14 +42,14 @@ export default {
                 'desktop-heading-1-sm': ['32px', 'normal']
             },
             lineHeight: {
-                base: '1',
+                base: '1'
             },
             fontFamily: {
                 script: ['var(--font-script)'],
                 heading: ['var(--font-heading)'],
                 body: ['var(--font-body)']
             }
-        },
+        }
     },
     plugins: [
         ({ addComponents }: any) => {
@@ -75,4 +75,4 @@ export default {
             })
         }
     ]
-} satisfies Config;
+} satisfies Config

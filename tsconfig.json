@@ -21,12 +21,7 @@
     ],
     "paths": {
         "@/*": ["./*"],
-        "@/components/*": ["components/*"],
-        "@/templates/*": ["templates/*"],
-        "@/utils/*": ["utils/*"],
-        "@/images/*": ["../public/images/*"],
-        "@/providers/*": ["providers/*"],
-        "@/hooks/*": ["hooks/*"]
+        "@/images/*": ["../public/images/*"]
     }
   },
   "include": ["svgr.d.ts","next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
