@@ -29,7 +29,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     const isInView = useInView(triggerRef, { margin: '-100px 0px 0px 0px' })
 
     return (
-        <article className='relative py-20' ref={triggerRef}>
+        <article className='relative py-20 last:pb-0' ref={triggerRef}>
             <Image
                 className='absolute inset-0 opacity-[12%] w-full h-full object-cover'
                 src={projectPoster}

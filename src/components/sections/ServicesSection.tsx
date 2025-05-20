@@ -6,13 +6,13 @@ import Card from '@/components/Card'
 
 const ServicesSection: React.FC = () => {
     return (
-        <section className='bg-cream text-dark py-20 relative overflow-hidden'>
-            <div className='border-solid border-t-white border-b-0 border-r-0 border-l-[100vw] border-t-[60px] border-transparent absolute w-full left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
+        <section className='bg-cream text-dark py-14 pb-8 lg:py-20 relative overflow-hidden'>
+            <div className='border-solid border-t-white border-b-0 border-r-0 border-l-[100vw] border-t-[30px] lg:border-t-[60px] border-transparent absolute w-full left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
 
             <SectionHeader className='mb-12' heading='Skills & Services' justify='center' />
 
             <div className='container mb-12'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-20'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-20'>
                     <Card
                         image={{
                             url: '/images/programmer-bro.svg',
@@ -60,7 +60,7 @@ const ServicesSection: React.FC = () => {
                     />
                 </div>
             </div>
-            <div className='border-solid border-b-white border-t-0 border-r-0 border-l-[100vw] border-b-[60px] border-transparent absolute w-full left-0 bottom-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
+            <div className='border-solid border-b-white border-t-0 border-r-0 border-l-[100vw] border-b-[30px] lg:border-b-[60px] border-transparent absolute w-full left-0 bottom-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
         </section>
     )
 }

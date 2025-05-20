@@ -8,7 +8,7 @@ import BlobSVG from '@/images/blob.svg'
 const ContactSection = () => {
     return (
         <section className='bg-white relative'>
-            <div className='container mx-auto py-12'>
+            <div className='container mx-auto py-6 lg:py-12'>
                 <GridRow>
                     <div className='flex flex-col gap-5 col-span-4 lg:col-span-6'>
                         <SectionHeader

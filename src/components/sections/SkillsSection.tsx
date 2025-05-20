@@ -4,7 +4,7 @@ import SectionHeader from '../SectionHeader'
 
 const SkillsSection: React.FC = () => {
     return (
-        <section className='section bg-white relative py-[40px]'>
+        <section className='section bg-white relative py-[30px] lg:py-[40px]'>
             <SectionHeader className='mb-12' heading='My Tools' justify='center' />
 
             <div className='container grid grid-cols-2 lg:grid-cols-6 gap-8'>

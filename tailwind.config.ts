@@ -26,7 +26,7 @@ export default {
                 foreground: 'var(--foreground)',
                 'blue-dark': '#01010D',
                 yellow: '#FECC2D',
-                teal: 'oklch(75.3% 0.1231 192.85)',
+                teal: '#26c7c4',
                 red: '#FD3D39',
                 cream: '#FCF8F4',
                 white: '#FFFFFF',
