@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
 import { ooohBaby, notoSans, raleway } from './fonts'
+import Script from 'next/script'
 
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
@@ -20,6 +21,22 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
+            <head>
+                {/* Load gtag.js */}
+                <Script
+                    async
+                    src='https://www.googletagmanager.com/gtag/js?id=G-BQJXSX1GXY'></Script>
+
+                {/* Inline init script */}
+                <Script id='gtag-init' strategy='afterInteractive'>
+                    {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-BQJXSX1GXY');
+                `}
+                </Script>
+            </head>
             <MobileMenuProvider>
                 <ScrollProvider>
                     <body
