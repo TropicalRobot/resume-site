@@ -11,7 +11,15 @@ import { ScrollProvider } from '@/providers/ScrollProvider'
 
 export const metadata: Metadata = {
     title: "Hi I'm Ryan | Full Stack Web Developer",
-    description: 'Resume site for Ryan Griffiths - full stack web developer'
+    description: 'Resume site for Ryan Griffiths - Full Stack Web Developer',
+    openGraph: {
+        type: 'website',
+        url: 'https://ryangriffiths.me',
+        title: "Hi I'm Ryan | Full Stack Web Developer",
+        description: 'Resume site for Ryan Griffiths - Full Stack Web Developer',
+        siteName: 'Ryan Griffiths - Full Stack Web Developer',
+        images: [{ url: 'https://ryangriffiths.me/images/photoshoot-author-1440.avif' }]
+    }
 }
 
 export default function RootLayout({
