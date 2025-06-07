@@ -15,11 +15,11 @@ const AboutSection: React.FC = () => {
                 increasing leadership responsibilities.
             </p>
             <p>
-                My focus is on front-end development—building responsive, accessible, and
+                My focus is on front-end development - building responsive, accessible, and
                 user-friendly interfaces that bring designs to life and deliver real business value.
-                I excel at translating design concepts into performant web experiences, while my
-                full-stack background provides valuable context for how frontend solutions integrate
-                with backend systems.
+                I excel at translating design concepts into pixel-perfect performant web
+                experiences, while my full-stack background provides valuable context for how
+                frontend solutions integrate with backend systems.
             </p>
             <p>
                 I&apos;ve led technical teams, delivered complex digital projects, and collaborated
@@ -30,7 +30,8 @@ const AboutSection: React.FC = () => {
             <p>
                 I value simplicity, collaboration, and doing great work for good people. Whether
                 coding, planning, or mentoring, I bring a mix of hands-on technical skills and
-                big-picture thinking—ensuring solutions are both polished and purpose-driven.
+                big-picture thinking, always ensuring solutions are both polished and
+                purpose-driven.
             </p>
         </ContentSection>
     )

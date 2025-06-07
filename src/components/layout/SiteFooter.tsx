@@ -13,10 +13,14 @@ export default function SiteFooter({}) {
                         <div className='flex flex-col gap-4'>
                             <div className='font-script text-2xl'>Ryan G</div>
                             <div className='flex items-center space-x-2'>
-                                <a href='https://github.com/TropicalRobot' target='_blank'>
+                                <a
+                                    className='hover:scale-120 focus:scale-120 transition-transform duration-200'
+                                    href='https://github.com/TropicalRobot'
+                                    target='_blank'>
                                     <GithubIcon className='fill-white w-10 h-10' />
                                 </a>
                                 <a
+                                    className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                     href='https://www.linkedin.com/in/ryan-griffiths-04649075/'
                                     target='_blank'>
                                     <LinkedInIcon className='fill-white w-10 h-10' />

@@ -5,19 +5,33 @@ import clsx from 'clsx'
 import { useScrollTo } from '@/providers/ScrollProvider'
 
 type ScrollToLinkProps = {
+    type?: 'button' | 'link'
     className?: string
     label: string
     target: string
 }
 
-const ScrollToLink: React.FC<ScrollToLinkProps> = ({ className, label, target }) => {
+const ScrollToLink: React.FC<ScrollToLinkProps> = ({
+    type = 'button',
+    className,
+    label,
+    target
+}) => {
     const { scrollTo } = useScrollTo()
     return (
-        <button
-            className={clsx('text-lg font-bold button-link', className)}
-            onClick={() => scrollTo(target)}>
-            {label}
-        </button>
+        <>
+            {type === 'link' ? (
+                <a href={`#${target}`} onClick={() => scrollTo(target)}>
+                    {label}
+                </a>
+            ) : (
+                <button
+                    className={clsx('text-lg font-bold button-link', className)}
+                    onClick={() => scrollTo(target)}>
+                    {label}
+                </button>
+            )}
+        </>
     )
 }
 
