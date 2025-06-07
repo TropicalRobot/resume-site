@@ -21,6 +21,9 @@ export default {
             }
         },
         extend: {
+            scale: {
+                '120': '1.2'
+            },
             colors: {
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',

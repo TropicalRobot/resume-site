@@ -13,12 +13,10 @@ const ContactSection = () => {
                     <div className='flex flex-col gap-5 col-span-4 lg:col-span-6'>
                         <SectionHeader
                             className='mb-5 lg:max-w-[80%]'
-                            heading='Let’s Talk'
+                            heading="Let's Talk"
                             justify='start'
-                            intro='Morbi rutrum, nulla ac laoreet feugiat, magna lacus luctus elit,
-          tincidunt commodo nulla elit et ex.'
+                            intro="Got a project in mind or just want to say hello?<br/>I'd love to hear from you."
                         />
-
                         <ContactForm />
                     </div>
                     <div className='flex justify-end items-center col-span-4 lg:col-span-5 lg:col-start-8'>

@@ -7,6 +7,7 @@ import FormInput from '@/components/form/FormInput'
 import FormTextarea from '@/components/form/FormTextarea'
 import clsx from 'clsx'
 import ReCAPTCHA from 'react-google-recaptcha'
+import ScrollToLink from '@/components/ScrollToLink'
 
 const RECAPTCHA_SITE_KEY = '6Lc8CT4rAAAAALu65YFRdiigTosL4xWWIU_cG7Qc'
 
@@ -56,17 +57,42 @@ const ContactForm: React.FC = () => {
     return (
         <>
             {serverResponse === 'success' ? (
-                <div role='alert' className='bg-green-100  text-green-700 px-8 py-6'>
-                    <p className='text-3xl pb-3'>Thanks for reaching out!</p>
-                    <p>
+                <div
+                    role='alert'
+                    className='bg-teal bg-opacity-20 px-8 py-6 border-teal border-2 rounded-lg '>
+                    <p className='text-3xl pb-3 border-b border-teal mb-4'>
+                        Thanks for reaching out!
+                    </p>
+                    <p className='text-lg'>
                         I&apos;ve received your message and will get back to you as soon as I can.
-                        In the meantime, feel free to check out my latest projects or connect with
-                        me on LinkedIn.{' '}
+                        In the meantime, feel free to check out{' '}
+                        <ScrollToLink
+                            type='link'
+                            className=''
+                            label='my latest projects'
+                            target='work'
+                        />{' '}
+                        or connect with me on{' '}
+                        <a
+                            href='https://www.linkedin.com/in/ryan-griffiths-04649075/'
+                            target='_blank'>
+                            LinkedIn
+                        </a>
+                        .{' '}
                     </p>
                 </div>
             ) : (
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
-                    {serverResponse !== null && <>{serverResponse}</>}
+                    {serverResponse !== null && (
+                        <div
+                            role='alert'
+                            className='bg-red bg-opacity-20 px-8 py-6 border-red border rounded-lg mb-6'>
+                            <p>
+                                An error occurred - unfortunately the form did not send. <br />
+                                Please try submitting it again.
+                            </p>
+                        </div>
+                    )}
                     <FormInput
                         id='name'
                         type='text'
@@ -133,8 +159,8 @@ const ContactForm: React.FC = () => {
                         </p>
                         <button
                             className={clsx(
-                                loading && 'text-red',
-                                'hover:bg-teal hover:bg-opacity-20 focus:bg-teal focus:bg-opacity-20 rounded-full py-3 px-8 text-base font-semibold outline-none border-2 border-teal ml-2'
+                                loading && 'text-teal',
+                                'hover:bg-teal hover:bg-opacity-20 focus:bg-teal focus:bg-opacity-20 rounded-full py-3 px-8 text-base font-semibold outline-none border-2 border-teal ml-2 transition-all duration-200 ease-in-out'
                             )}>
                             Submit
                         </button>

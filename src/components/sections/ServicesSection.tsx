@@ -54,7 +54,7 @@ const ServicesSection: React.FC = () => {
                             height: 242
                         }}
                         heading='Consultancy'
-                        text='Technical planning, audits, and advice—helping teams make
+                        text='Technical planning, audits, and advice. Helping teams make
                   smart decisions about platforms, structure, and scalable
                   solutions.'
                     />

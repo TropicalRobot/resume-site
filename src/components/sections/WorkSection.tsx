@@ -10,7 +10,9 @@ const WorkSection: React.FC = () => {
                 className='container mb-10 lg:mb-20'
                 heading='My Work'
                 justify='center'
-                intro="Some projects I've loved working on over the past 11 years"
+                intro="Highlights from 11 years of agency work at 3ev.<br/>Projects I'm proud to have helped shape and ship.
+
+"
             />
 
             <div className='flex flex-col gap-4 bg-blue-dark'>
@@ -42,7 +44,7 @@ const WorkSection: React.FC = () => {
                                 Outcome The site launched in sync with a major release, successfully
                                 supporting heavy traffic and providing a smooth experience across
                                 devices. The client appreciated the clean admin interface and speed
-                                of delivery—especially given the compressed timeline.
+                                of delivery, especially given the compressed timeline.
                             </p>
                             <h3>Check It Out</h3>
                             <p>
@@ -77,8 +79,8 @@ const WorkSection: React.FC = () => {
                                 features that streamlined internal processes and improved the
                                 customer experience. I later led a complete visual redesign of the
                                 site, working solo to implement a refreshed look and feel. More
-                                recently, I played a central role in a full platform rebuild—this
-                                time as part of a small team—migrating the frontend to React and
+                                recently, I played a central role in a full platform rebuild - this
+                                time as part of a small team, migrating the frontend to React and
                                 introducing a headless WordPress CMS for the first time.
                             </p>
 
@@ -114,8 +116,7 @@ const WorkSection: React.FC = () => {
                                 leisurly tours across Europe. The website needed to blend elegant
                                 design with real-time availability and tailored itinerary
                                 options—while integrating smoothly with the company&apos;s bespoke
-                                booking integrating smoothly with the companys bespoke booking
-                                infrastructure.
+                                booking infrastructure.
                             </p>
                             <h3>My Role</h3>
                             <p>

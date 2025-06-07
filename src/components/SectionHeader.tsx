@@ -20,7 +20,11 @@ export default function SectionHeader({
             <h2 className='text-heading-1 lg:text-tablet-heading-1 xl:text-desktop-heading-1 mb-4 pb-2 border-b-[3px] border-teal'>
                 {heading}
             </h2>
-            {intro && <p className='font-semibold text-lg'>{intro}</p>}
+            {intro && (
+                <p
+                    className={clsx('font-semibold text-lg', justify === 'center' && 'text-center')}
+                    dangerouslySetInnerHTML={{ __html: intro }}></p>
+            )}
         </div>
     )
 }

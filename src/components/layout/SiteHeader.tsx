@@ -89,11 +89,15 @@ export default function SiteHeader({}) {
                         </nav>
                         <div className='flex items-center space-x-2'>
                             <a
+                                className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                 href='https://www.linkedin.com/in/ryan-griffiths-04649075/'
                                 target='_blank'>
                                 <LinkedInIcon className='fill-black w-10 h-10' />
                             </a>
-                            <a href='https://github.com/TropicalRobot' target='_blank'>
+                            <a
+                                className='hover:scale-120 focus:scale-120 transition-transform duration-200'
+                                href='https://github.com/TropicalRobot'
+                                target='_blank'>
                                 <GithubIcon className='fill-black w-10 h-10' />
                             </a>
                         </div>
