@@ -44,7 +44,7 @@ const WorkSection: React.FC = () => {
                                 devices. The client appreciated the clean admin interface and speed
                                 of delivery—especially given the compressed timeline.
                             </p>
-                            <h3>Link</h3>
+                            <h3>Check It Out</h3>
                             <p>
                                 <a href='https://thechemicalbrothers.com' target='_blank'>
                                     thechemicalbrothers.com
@@ -72,8 +72,8 @@ const WorkSection: React.FC = () => {
                             <h3>My Role</h3>
                             <p>
                                 Over 11 years, I was deeply involved in the ongoing development and
-                                evolution of the Oliver’s Travels website. I initially worked on
-                                building and refining a custom Laravel booking system, delivering
+                                evolution of the Oliver&apos;s Travels website. I initially worked
+                                on building and refining a custom Laravel booking system, delivering
                                 features that streamlined internal processes and improved the
                                 customer experience. I later led a complete visual redesign of the
                                 site, working solo to implement a refreshed look and feel. More
@@ -88,9 +88,9 @@ const WorkSection: React.FC = () => {
                                 technical and UX improvements contributing to increased conversions
                                 and smoother team workflows. The React rebuild set the foundation
                                 for future scalability while improving editorial flexibility for the
-                                marketing team.
+                                marketing team using Wordpress.
                             </p>
-                            <h3>Link</h3>
+                            <h3>Check It Out</h3>
                             <p>
                                 <a href='https://oliverstravels.com' target='_blank'>
                                     oliverstravels.com
@@ -110,11 +110,12 @@ const WorkSection: React.FC = () => {
                         <>
                             <h3>Overview</h3>
                             <p>
-                                Cycling for Softies is a luxury cycling holiday company offering
-                                curated tours across Europe. The website needed to blend elegant
+                                Cycling for Softies is a cycling holiday company offering curated
+                                leisurly tours across Europe. The website needed to blend elegant
                                 design with real-time availability and tailored itinerary
-                                options—while integrating smoothly with the company’s bespoke
-                                booking infrastructure.
+                                options—while integrating smoothly with the company&apos;s bespoke
+                                booking integrating smoothly with the companys bespoke booking
+                                infrastructure.
                             </p>
                             <h3>My Role</h3>
                             <p>
@@ -122,7 +123,7 @@ const WorkSection: React.FC = () => {
                                 WordPress backend for content management and a Vue.js-powered
                                 frontend to deliver a smooth, app-like experience. I also helped
                                 design and build the custom Laravel property management system that
-                                powers availability, pricing, and booking data across the site.
+                                powers availability, and pricing data across the site.
                             </p>
 
                             <h3>Outcome</h3>
@@ -130,10 +131,9 @@ const WorkSection: React.FC = () => {
                                 The hybrid approach enabled editors to manage content easily while
                                 providing users with a modern, responsive interface. The tight
                                 integration with internal systems allowed for greater operational
-                                efficiency and a more engaging customer experience—leading to
-                                increased online enquiries.
+                                efficiency and a more engaging customer experience.
                             </p>
-                            <h3>Link</h3>
+                            <h3>Check It Out</h3>
                             <p>
                                 <a href='https://cyclingforsofties.com' target='_blank'>
                                     cyclingforsofties.com

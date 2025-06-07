@@ -21,7 +21,7 @@ const ServicesSection: React.FC = () => {
                             height: 242
                         }}
                         heading='Website Development'
-                        text='End-to-end builds using modern front-end tools and CMS platforms—clean, maintainable code with a focus on performance and accessibility.'
+                        text='End-to-end builds using modern front-end tools and CMS platforms. Clean, maintainable code with a focus on performance and accessibility.'
                     />
 
                     <Card
@@ -43,7 +43,7 @@ const ServicesSection: React.FC = () => {
                             height: 242
                         }}
                         heading='Accessibility'
-                        text='Designing and building inclusive, standards-compliant websites that work for everyone—guided by WCAG and usability best practices.'
+                        text='Designing and building inclusive, standards-compliant websites that work for everyone. Guided by WCAG and usability best practices.'
                     />
 
                     <Card
