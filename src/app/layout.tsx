@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import '@/styles/globals.css'
 import { ooohBaby, notoSans, raleway } from './fonts'
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import SiteHeader from '@/components/layout/SiteHeader'
 import SiteFooter from '@/components/layout/SiteFooter'
@@ -57,6 +58,7 @@ export default function RootLayout({
                         <SiteHeader />
                         {children}
                         <SiteFooter />
+                        <SpeedInsights />
                     </body>
                 </ScrollProvider>
             </MobileMenuProvider>
