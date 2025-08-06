@@ -31,7 +31,21 @@ const Hero: React.FC = () => {
                 sizes='100vw'
             />
 
-            <motion.div
+            <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className='drop-shadow-2xl object-cover h-full w-full absolute inset-0 lg:z-10'
+                src='/images/photoshoot-author-trans-2400.avif'
+                width={2400}
+                height={1080}
+                alt='Picture of the author'
+                srcSet='/images/photoshoot-author-trans-720.avif 720w, /images/photoshoot-author-trans-1440.avif 1440w, /images/photoshoot-author-trans-2400.avif 2400w'
+                sizes='100vw'
+            />
+
+            <div
                 className='relative container h-full flex-col content-end'
                 style={{ y: translateContentY }}>
                 <div className='pb-8 lg:pb-32 flex-col'>
@@ -55,9 +69,18 @@ const Hero: React.FC = () => {
                                 y: { duration: 0.6, ease: 'easeOut', delay: 0.1 },
                                 opacity: { duration: 0.6, ease: 'easeOut', delay: 0.3 }
                             }}
-                            className='uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70 mb-4 lg:mb-10'>
+                            className='uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70'>
                             Full Stack
-                            <br /> Web Developer
+                        </motion.h2>
+                        <motion.h2
+                            initial={{ y: '120%', opacity: 0 }}
+                            animate={{ y: '0%', opacity: 1 }}
+                            transition={{
+                                y: { duration: 0.6, ease: 'easeOut', delay: 0.1 },
+                                opacity: { duration: 0.6, ease: 'easeOut', delay: 0.3 }
+                            }}
+                            className='z-10 relative uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70 mb-4 lg:mb-10'>
+                            Web Developer
                         </motion.h2>
                     </div>
                     {/* <p className="text-xl mt-2 ml-2">Based in Brighton, UK</p> */}
@@ -76,7 +99,7 @@ const Hero: React.FC = () => {
                         <ScrollDownArrow className='max-lg:hidden' />
                     </motion.button>
                 </div>
-            </motion.div>
+            </div>
             <div className='absolute -bottom-[50px] w-full h-[50px] shadow-[0_-10px_8px_-6px_rgb(0,0,0,0.1)]'></div>
         </motion.div>
     )

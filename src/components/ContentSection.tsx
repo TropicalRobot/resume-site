@@ -1,7 +1,10 @@
-import React, { ReactNode } from 'react'
+'use client'
+
+import React, { useRef, ReactNode } from 'react'
 import clsx from 'clsx'
 import SectionHeader from '@/components/SectionHeader'
 import GridRow from '@/components/layout/GridRow'
+import { motion, useInView } from 'framer-motion'
 
 type ContentSectionProps = {
     className?: string
@@ -20,9 +23,16 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     intro,
     children
 }) => {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
     return (
         <section className={clsx(className)}>
-            <div className='container mx-auto py-8 lg:py-12'>
+            <motion.div
+                // ref={ref}
+                // initial={{ y: 50, opacity: 0 }}
+                // animate={isInView ? { y: 0, opacity: 1 } : {}}
+                // transition={{ duration: 0.4, ease: 'easeOut' }}
+                className='container mx-auto py-8 lg:py-12'>
                 <GridRow>
                     <div
                         className={clsx(
@@ -45,7 +55,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
                         {children}
                     </div>
                 </GridRow>
-            </div>
+            </motion.div>
         </section>
     )
 }

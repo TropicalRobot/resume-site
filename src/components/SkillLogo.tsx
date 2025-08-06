@@ -4,8 +4,7 @@ type SkillLogoProps = {
     image: string
     heading: string
 }
-
-export default function SkillLogo({ image, heading }: SkillLogoProps) {
+const SkillLogo: React.FC<SkillLogoProps> = ({ image, heading }) => {
     return (
         <div className='col-span-1 flex flex-col items-center font-bold gap-4 justify-between'>
             <div className='flex flex-col justify-center h-full max-h-[64px]'>
@@ -15,3 +14,5 @@ export default function SkillLogo({ image, heading }: SkillLogoProps) {
         </div>
     )
 }
+
+export default SkillLogo
