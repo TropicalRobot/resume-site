@@ -10,8 +10,6 @@ const Hero: React.FC = () => {
     const { scrollTo } = useScrollTo()
 
     const translateHeroY = useTransform(scrollY, [0, 1000], [0, -600])
-    // when scrollY goes from 0px to 2000px, move from 0px to 200px
-    const translateContentY = useTransform(scrollY, [0, 1000], [0, -100])
 
     return (
         <motion.div
@@ -45,9 +43,7 @@ const Hero: React.FC = () => {
                 sizes='100vw'
             />
 
-            <div
-                className='relative container h-full flex-col content-end'
-                style={{ y: translateContentY }}>
+            <div className='relative container h-full flex-col content-end'>
                 <div className='pb-8 lg:pb-32 flex-col'>
                     <div className='overflow-hidden inline-block pr-2 w-full'>
                         <motion.h1
