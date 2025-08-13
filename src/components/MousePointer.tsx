@@ -37,7 +37,7 @@ const MousePointer = () => {
 
     return (
         <motion.div
-            className='fixed top-0 left-0 w-8 h-8 backdrop-invert backdrop-grayscale rounded-full pointer-events-none z-[100]'
+            className='fixed top-0 left-0 w-8 h-8 backdrop-invert backdrop-grayscale rounded-full pointer-events-none z-100'
             animate={{
                 x: position.x,
                 y: position.y,

@@ -84,7 +84,7 @@ const ServicesSection: React.FC = () => {
 
     return (
         <section className='bg-cream text-dark py-14 pb-8 lg:py-20 relative overflow-hidden'>
-            <div className='border-solid border-t-white border-b-0 border-r-0 border-l-[100vw] border-t-[30px] lg:border-t-[60px] border-transparent absolute w-full left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
+            <div className='border-solid border-t-white border-b-0 border-r-0 border-l-[100vw] border-t-30 lg:border-t-60 border-transparent absolute w-full left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
 
             <SectionHeader className='mb-12' heading='Skills & Services' justify='center' />
 
@@ -110,7 +110,7 @@ const ServicesSection: React.FC = () => {
                 ))}
             </div>
 
-            <div className='border-solid border-b-white border-t-0 border-r-0 border-l-[100vw] border-b-[30px] lg:border-b-[60px] border-transparent absolute w-full left-0 bottom-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
+            <div className='border-solid border-b-white border-t-0 border-r-0 border-l-[100vw] border-b-30 lg:border-b-60 border-transparent absolute w-full left-0 bottom-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
         </section>
     )
 }

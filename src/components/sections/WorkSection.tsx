@@ -5,7 +5,7 @@ import CaseStudy from '@/components/CaseStudy'
 const WorkSection: React.FC = () => {
     return (
         <section className='bg-blue-dark text-white py-16 lg:py-20 relative'>
-            <div className='border-solid border-t-white border-b-0 border-l-0 border-r-[100vw] border-t-[30px] lg:border-t-[60px] border-transparent absolute w-full left-0 top-0'></div>
+            <div className='border-solid border-t-white border-b-0 border-l-0 border-r-[100vw] border-t-30 lg:border-t-60 border-transparent absolute w-full left-0 top-0'></div>
             <SectionHeader
                 className='container mb-10 lg:mb-20'
                 heading='My Work'

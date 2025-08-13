@@ -31,7 +31,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     return (
         <article className='relative py-20 last:pb-0' ref={triggerRef}>
             <Image
-                className='absolute inset-0 opacity-[12%] w-full h-full object-cover'
+                className='absolute inset-0 opacity-12 w-full h-full object-cover'
                 src={projectPoster}
                 alt={projectName}
                 width='1200'
@@ -70,7 +70,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                                 rel='noopener noreferrer'
                                 aria-label={`Visit ${projectName} website`}>
                                 <Image
-                                    className='w-full rounded'
+                                    className='w-full rounded-sm'
                                     src={projectScreenshot}
                                     alt={`Screenshop of ${projectName}`}
                                     width='360'
