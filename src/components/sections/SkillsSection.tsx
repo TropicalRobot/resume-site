@@ -9,22 +9,28 @@ const SkillsSection: React.FC = () => {
     const skills = [
         { image: '/images/logos/HTML5-badge.svg', heading: 'HTML5' },
         { image: '/images/logos/CSS3-badge.svg', heading: 'CSS3' },
-        { image: '/images/logos/JS-badge-alt.svg', heading: 'JS' },
-        { image: '/images/logos/bootstrap-logo.svg', heading: 'Bootstrap' },
+        { image: '/images/logos/JS-badge-alt.svg', heading: 'JavaScript' },
+        { image: '/images/logos/typescript-logo.svg', heading: 'Typescript' },
         { image: '/images/logos/react-logo.svg', heading: 'React' },
         { image: '/images/logos/nextjs-logo.svg', heading: 'NextJS' },
         { image: '/images/logos/vuejs-logo.svg', heading: 'VueJS' },
         { image: '/images/logos/tailwind-css-logo.svg', heading: 'Tailwind CSS' },
-        { image: '/images/logos/laravel-logo.svg', heading: 'Laravel' },
-        { image: '/images/logos/magento-logo.svg', heading: 'Magento' },
-        { image: '/images/logos/wordpress-logo.svg', heading: 'Wordpress' },
-        { image: '/images/logos/php-logo.svg', heading: 'PHP' },
-        { image: '/images/logos/figma-logo.svg', heading: 'Figma' },
-        { image: '/images/logos/docker-logo.svg', heading: 'Docker' },
+        { image: '/images/logos/sass-logo.svg', heading: 'Sass' },
+        { image: '/images/logos/bootstrap-logo.svg', heading: 'Bootstrap' },
+        { image: '/images/logos/sql-logo.svg', heading: 'SQL' },
         { image: '/images/logos/graphQL-logo.svg', heading: 'GraphQL' },
-        { image: '/images/logos/salesforce-logo.svg', heading: 'Salesforce' },
+        { image: '/images/logos/php-logo.svg', heading: 'PHP' },
+        { image: '/images/logos/laravel-logo.svg', heading: 'Laravel' },
+        { image: '/images/logos/wordpress-logo.svg', heading: 'Wordpress' },
+        { image: '/images/logos/woocommerce-logo.svg', heading: 'Woocommerce' },
+        { image: '/images/logos/figma-logo.svg', heading: 'Figma' },
         { image: '/images/logos/webflow-logo.svg', heading: 'Webflow' },
-        { image: '/images/logos/woocommerce-logo.svg', heading: 'Woocommerce' }
+        { image: '/images/logos/salesforce-logo.svg', heading: 'Salesforce' },
+        { image: '/images/logos/magento-logo.svg', heading: 'Magento' },
+        { image: '/images/logos/git-logo.svg', heading: 'Git' },
+        { image: '/images/logos/docker-logo.svg', heading: 'Docker' },
+        { image: '/images/logos/google-cloud-logo.svg', heading: 'Google Cloud' },
+        { image: '/images/logos/github-copilot-icon.webp', heading: 'Github Copilot' }
     ]
 
     const containerVariants: Variants = {
@@ -60,7 +66,7 @@ const SkillsSection: React.FC = () => {
             <SectionHeader className='mb-12' heading='My Tools' justify='center' />
 
             <motion.div
-                className='container grid grid-cols-2 lg:grid-cols-6 gap-8'
+                className='container grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8'
                 variants={containerVariants}
                 initial='hidden'
                 whileInView='visible'
