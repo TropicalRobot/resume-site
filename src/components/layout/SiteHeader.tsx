@@ -69,8 +69,8 @@ export default function SiteHeader({}) {
 
                     <div
                         className={clsx(
-                            'relative max-lg:hidden max-lg:fixed lg:flex lg:items-center max-lg:h-svh max-lg:-top-[17px] max-lg:-left-[43px] max-lg:-right-[43px]'
-                            // !showMobileMenu && "hidden"
+                            'relative max-lg:hidden max-lg:fixed lg:flex lg:items-center max-lg:h-svh max-lg:-top-[17px] max-lg:-left-[43px] max-lg:-right-[43px]',
+                            !showMobileMenu && 'hidden'
                         )}>
                         <nav className='flex max-lg:flex-col items-center justify-center gap-4 lg:gap-10 lg:mr-10 max-lg:py-10'>
                             <ScrollToLink

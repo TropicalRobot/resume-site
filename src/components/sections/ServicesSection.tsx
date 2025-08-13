@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useRef } from 'react'
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import SectionHeader from '@/components/SectionHeader'
 import Card from '@/components/Card'
 
@@ -27,7 +27,7 @@ const ServicesSection: React.FC = () => {
             y: 0,
             scale: 1,
             transition: {
-                type: 'spring',
+                type: 'spring' as const,
                 stiffness: 100,
                 damping: 15,
                 duration: 0.6
@@ -82,6 +82,32 @@ const ServicesSection: React.FC = () => {
         ]
     ]
 
+    // Shared mouse-driven tilt across the grid
+    const containerRef = useRef<HTMLDivElement>(null)
+    const mouseX = useMotionValue(0)
+    const mouseY = useMotionValue(0)
+    const smoothX = useSpring(mouseX, { stiffness: 200, damping: 20, mass: 0.2 })
+    const smoothY = useSpring(mouseY, { stiffness: 200, damping: 20, mass: 0.2 })
+
+    const MAX_TILT = 5 // deg
+    const rotateX = useTransform(smoothY, [-0.5, 0.5], [MAX_TILT, -MAX_TILT])
+    const rotateY = useTransform(smoothX, [-0.5, 0.5], [-MAX_TILT, MAX_TILT])
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const el = containerRef.current
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width - 0.5
+        const y = (e.clientY - rect.top) / rect.height - 0.5
+        mouseX.set(x)
+        mouseY.set(y)
+    }
+
+    const handleMouseLeave = () => {
+        mouseX.set(0)
+        mouseY.set(0)
+    }
+
     return (
         <section className='bg-cream text-dark py-14 pb-8 lg:py-20 relative overflow-hidden'>
             <div className='border-solid border-t-white border-b-0 border-r-0 border-l-[100vw] border-t-30 lg:border-t-60 border-transparent absolute w-full left-0 top-0 drop-shadow-[0_1px_13px_rgba(0,0,0,0.15)]'></div>
@@ -91,6 +117,9 @@ const ServicesSection: React.FC = () => {
             <div className='container mb-12 space-y-[30px] lg:space-y-20'>
                 {services.map((row, rowIndex) => (
                     <motion.div
+                        ref={containerRef}
+                        onMouseMove={handleMouseMove}
+                        onMouseLeave={handleMouseLeave}
                         key={rowIndex}
                         className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-20'
                         variants={containerVariants}
@@ -98,7 +127,15 @@ const ServicesSection: React.FC = () => {
                         whileInView='visible'
                         viewport={{ once: true, amount: 0.3 }}>
                         {row.map((service, cardIndex) => (
-                            <motion.div key={`${rowIndex}-${cardIndex}`} variants={cardVariants}>
+                            <motion.div
+                                style={{
+                                    rotateX,
+                                    rotateY,
+                                    transformPerspective: 900,
+                                    willChange: 'transform'
+                                }}
+                                key={`${rowIndex}-${cardIndex}`}
+                                variants={cardVariants}>
                                 <Card
                                     image={service.image}
                                     heading={service.heading}
