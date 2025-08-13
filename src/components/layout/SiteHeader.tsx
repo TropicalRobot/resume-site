@@ -50,20 +50,22 @@ export default function SiteHeader({}) {
                         <div className='ml-4 font-script text-2xl'>Ryan G</div>
                     </div>
 
-                    <button
-                        className={clsx(
-                            'hamburger hamburger--spin lg:hidden',
-                            showMobileMenu && 'is-active'
-                        )}
-                        type='button'
-                        onClick={() => toggleMobileMenu()}
-                        role='button'
-                        aria-label='Open main menu'
-                        aria-expanded={showMobileMenu}>
-                        <span className='hamburger-box mr-2'>
-                            <span className='hamburger-inner'></span>
-                        </span>
-                    </button>
+                    <div className='lg:hidden'>
+                        <button
+                            className={clsx(
+                                'hamburger hamburger--spin',
+                                showMobileMenu && 'is-active'
+                            )}
+                            type='button'
+                            onClick={() => toggleMobileMenu()}
+                            role='button'
+                            aria-label='Open main menu'
+                            aria-expanded={showMobileMenu}>
+                            <span className='hamburger-box mr-2'>
+                                <span className='hamburger-inner'></span>
+                            </span>
+                        </button>
+                    </div>
 
                     <div
                         className={clsx(

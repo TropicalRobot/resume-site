@@ -13,7 +13,7 @@ const ScrollDownArrow: React.FC<ScrollDownArrowProps> = ({ className }) => {
         <div className={clsx('button-link', className)}>
             <div className='relative flex justify-center'>
                 <Image
-                    className='mb-4 rotate-[45deg]'
+                    className='mb-4 rotate-45'
                     src='/images/arrow.png'
                     alt='Scroll down'
                     width='50'
