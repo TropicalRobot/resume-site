@@ -21,7 +21,7 @@ const FormInput: React.FC<FormInputProps> = ({
                 rows='8'
                 placeholder={placeholder}
                 className={clsx(
-                    'w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:shadow-md',
+                    'w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-hidden focus:shadow-md',
                     errors[id] && 'border-red',
                     !errors[id] && 'focus:border-black'
                 )}

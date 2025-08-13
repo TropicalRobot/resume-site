@@ -31,7 +31,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     return (
         <article className='relative py-20 last:pb-0' ref={triggerRef}>
             <Image
-                className='absolute inset-0 opacity-[12%] w-full h-full object-cover'
+                className='absolute inset-0 opacity-12 w-full h-full object-cover'
                 src={projectPoster}
                 alt={projectName}
                 width='1200'
@@ -60,19 +60,19 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             contentAlign === 'left' ? 'lg:order-3' : 'lg:order-1'
                         )}>
                         <motion.div
-                            initial={{ y: -50, opacity: 0 }}
-                            animate={isInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
-                            transition={{ duration: 0.4, ease: 'easeOut' }}
-                            className='sticky top-6'>
+                            initial={{ y: -120, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: -120, opacity: 0 }}
+                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                            className='relative overflow-hidden rounded-sm h-full'>
                             <a
                                 href={websiteUrl}
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 aria-label={`Visit ${projectName} website`}>
                                 <Image
-                                    className='w-full rounded'
+                                    className='w-full rounded-sm lg:absolute top-0 max-lg:aspect-video max-lg:object-cover max-lg:object-top'
                                     src={projectScreenshot}
-                                    alt={`Screenshop of ${projectName}`}
+                                    alt={`Screenshot of ${projectName}`}
                                     width='360'
                                     height='100'
                                 />

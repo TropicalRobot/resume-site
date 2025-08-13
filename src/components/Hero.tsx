@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
                         onClick={() => scrollTo('about')}
                         role='button'
                         aria-label='Scroll down'>
-                        <ScrollDownArrow className='max-lg:hidden' />
+                        <ScrollDownArrow className='z-50 cursor-pointer max-lg:hidden' />
                     </motion.button>
                 </div>
             </div>

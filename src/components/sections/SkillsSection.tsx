@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import SkillLogo from '../SkillLogo'
 import SectionHeader from '../SectionHeader'
 
@@ -27,7 +27,7 @@ const SkillsSection: React.FC = () => {
         { image: '/images/logos/woocommerce-logo.svg', heading: 'Woocommerce' }
     ]
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -37,7 +37,7 @@ const SkillsSection: React.FC = () => {
         }
     }
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: {
             opacity: 0,
             scale: 0.8,
@@ -48,7 +48,7 @@ const SkillsSection: React.FC = () => {
             scale: 1,
             y: 0,
             transition: {
-                type: 'spring',
+                type: 'spring' as const,
                 stiffness: 100,
                 damping: 15
             }

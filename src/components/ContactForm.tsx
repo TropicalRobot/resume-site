@@ -57,9 +57,7 @@ const ContactForm: React.FC = () => {
     return (
         <>
             {serverResponse === 'success' ? (
-                <div
-                    role='alert'
-                    className='bg-teal bg-opacity-20 px-8 py-6 border-teal border-2 rounded-lg '>
+                <div role='alert' className='bg-teal/20 px-8 py-6 border-teal border-2 rounded-lg '>
                     <p className='text-3xl pb-3 border-b border-teal mb-4'>
                         Thanks for reaching out!
                     </p>
@@ -86,7 +84,7 @@ const ContactForm: React.FC = () => {
                     {serverResponse !== null && (
                         <div
                             role='alert'
-                            className='bg-red bg-opacity-20 px-8 py-6 border-red border rounded-lg mb-6'>
+                            className='bg-red/20 px-8 py-6 border-red border rounded-lg mb-6'>
                             <p>
                                 An error occurred - unfortunately the form did not send. <br />
                                 Please try submitting it again.
@@ -160,7 +158,7 @@ const ContactForm: React.FC = () => {
                         <button
                             className={clsx(
                                 loading && 'text-teal',
-                                'hover:bg-teal hover:bg-opacity-20 focus:bg-teal focus:bg-opacity-20 rounded-full py-3 px-8 text-base font-semibold outline-none border-2 border-teal ml-2 transition-all duration-200 ease-in-out'
+                                'hover:bg-teal/20 focus:bg-teal/20 rounded-full py-3 px-8 text-base font-semibold outline-hidden border-2 border-teal ml-2 transition-all duration-200 ease-in-out'
                             )}>
                             Submit
                         </button>

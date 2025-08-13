@@ -30,7 +30,7 @@ const MobileMenu: React.FC = () => {
                         className={clsx(
                             'text-lg font-bold transition-all ease-in-out',
                             showMobileMenu
-                                ? 'translate-x-0 opacity-1 duration-200 delay-100'
+                                ? 'translate-x-0 opacity-100 duration-200 delay-100'
                                 : '-translate-x-[50%] duration-100 delay-0 opacity-0'
                         )}
                         label='About'
@@ -41,7 +41,7 @@ const MobileMenu: React.FC = () => {
                         className={clsx(
                             'text-lg font-bold transition-all ease-in-out',
                             showMobileMenu
-                                ? 'translate-x-0 opacity-1 duration-200 delay-100'
+                                ? 'translate-x-0 opacity-100 duration-200 delay-100'
                                 : '-translate-x-[50%] duration-100 delay-0 opacity-0'
                         )}
                         label='Work'
@@ -52,7 +52,7 @@ const MobileMenu: React.FC = () => {
                         className={clsx(
                             'text-lg font-bold transition-all ease-in-out',
                             showMobileMenu
-                                ? 'translate-x-0 opacity-1 duration-200 delay-100'
+                                ? 'translate-x-0 opacity-100 duration-200 delay-100'
                                 : '-translate-x-[50%] duration-100 delay-0 opacity-0'
                         )}
                         label='Contact'
