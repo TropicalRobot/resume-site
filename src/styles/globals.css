@@ -1,8 +1,10 @@
 @import './components/hamburger.css';
 
+@import './global/typography.css';
+
 @import 'tailwindcss';
 
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 /*
   ---break---
@@ -28,13 +30,23 @@
     }
 }
 
+:root {
+    --font-heading: 'Noto Sans', serif;
+    --font-display: var(--font-heading), display, serif;
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
 @theme {
-    --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    --font-body:
+        var(--font-body), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
         'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-script: var(--font-script), cursive;
     --font-display: var(--font-heading), display, serif;
 
-    --color-black: #000;
+    --color-black: #313131;
     --color-white: #fff;
 
     --background: #fff;
@@ -313,10 +325,10 @@ p a:hover:after {
 */
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }

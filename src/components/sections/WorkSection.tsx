@@ -82,6 +82,7 @@ const WorkSection: React.FC = () => {
                 />
 
                 <CaseStudy
+                    contentAlign='left'
                     projectName='The Chemical Brothers'
                     projectLogo='/images/portfolio/chem-bros/chem-bros-logo.svg'
                     projectScreenshot='/images/portfolio/chem-bros/chem-bros-screenshot-full.jpg'
@@ -122,7 +123,7 @@ const WorkSection: React.FC = () => {
                 />
 
                 <CaseStudy
-                    contentAlign='left'
+                    contentAlign='right'
                     projectName='Cycling for Softies'
                     projectLogo='/images/portfolio/cfs/cfs-logo.svg'
                     projectScreenshot='/images/portfolio/cfs/cfs-screenshot-full.jpg'
