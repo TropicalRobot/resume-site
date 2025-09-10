@@ -1,15 +1,19 @@
-'use client'
-
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 import GridRow from '@/components/layout/GridRow'
 import { motion, useInView } from 'framer-motion'
+import { Badge } from '@/components/ui/badge'
 
 type CaseStudyProps = {
     content?: React.ReactNode
     projectName: string
-    projectLogo: string
+    projectLogo: {
+        url: string
+        width?: number
+        height?: number
+    }
+    projectAgency?: '3ev' | 'Independent'
     projectScreenshot: string
     projectPoster: string
     contentAlign?: 'left' | 'right'
@@ -22,6 +26,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     projectLogo,
     projectScreenshot,
     projectPoster,
+    projectAgency,
     contentAlign = 'left',
     websiteUrl
 }) => {
@@ -31,7 +36,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     return (
         <article className='relative py-20 last:pb-0' ref={triggerRef}>
             <Image
-                className='absolute inset-0 opacity-12 w-full h-full object-cover'
+                className='absolute inset-0 opacity-20 w-full h-full object-cover'
                 src={projectPoster}
                 alt={projectName}
                 width='1200'
@@ -41,17 +46,22 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                 <GridRow>
                     <div
                         className={clsx(
-                            'col-span-6',
+                            'col-span-6 text-white',
                             contentAlign === 'right' ? 'lg:order-3' : 'lg:order-1'
                         )}>
                         <Image
-                            className='mb-8'
-                            src={projectLogo}
+                            className='mb-8 h-[90px] w-auto'
+                            src={projectLogo.url}
                             alt={projectName}
-                            width='360'
-                            height='100'
+                            width={projectLogo.width ?? 360}
+                            height={projectLogo.height ?? 100}
                             sizes='100vw'
                         />
+                        <Badge variant='outline' className='mb-4'>
+                            {projectAgency === '3ev'
+                                ? 'Agency Project (3ev)'
+                                : 'Independent Project'}
+                        </Badge>
                         <div className='text-lg'>{content}</div>
                     </div>
                     <div

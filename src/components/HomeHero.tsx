@@ -29,6 +29,20 @@ const HomeHero: React.FC = () => {
                 sizes='100vw'
             />
 
+            <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className='drop-shadow-2xl object-cover h-full w-full absolute inset-0 lg:z-10'
+                src='/images/photoshoot-author-trans-2400.avif'
+                width={2400}
+                height={1080}
+                alt='Picture of the author'
+                srcSet='/images/photoshoot-author-trans-720.avif 720w, /images/photoshoot-author-trans-1440.avif 1440w, /images/photoshoot-author-trans-2400.avif 2400w'
+                sizes='100vw'
+            />
+
             <div className='relative container h-full flex-col content-end'>
                 <div className='pb-8 lg:pb-32 flex-col'>
                     <div className='overflow-hidden inline-block pr-2 w-full'>

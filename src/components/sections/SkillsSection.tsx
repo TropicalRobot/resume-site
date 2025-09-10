@@ -18,6 +18,7 @@ const SkillsSection: React.FC = () => {
         { image: '/images/logos/bootstrap-logo.svg', heading: 'Bootstrap' },
         { image: '/images/logos/sql-logo.svg', heading: 'SQL' },
         { image: '/images/logos/graphQL-logo.svg', heading: 'GraphQL' },
+        { image: '/images/logos/supabase-logo.svg', heading: 'Supabase' },
         { image: '/images/logos/php-logo.svg', heading: 'PHP' },
         { image: '/images/logos/laravel-logo.svg', heading: 'Laravel' },
         { image: '/images/logos/wordpress-logo.svg', heading: 'Wordpress' },
@@ -29,7 +30,6 @@ const SkillsSection: React.FC = () => {
         { image: '/images/logos/git-logo.svg', heading: 'Git' },
         { image: '/images/logos/docker-logo.svg', heading: 'Docker' },
         { image: '/images/logos/google-cloud-logo.svg', heading: 'Google Cloud' },
-        { image: '/images/logos/ChatGPT-logo.svg', heading: 'ChatGPT' },
         { image: '/images/logos/github-copilot-icon.webp', heading: 'Github Copilot' }
     ]
 

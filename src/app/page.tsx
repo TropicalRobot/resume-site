@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero'
+import HomeHero from '@/components/HomeHero'
 import AboutSection from '@/components/sections/AboutSection'
 import SkillsSection from '@/components/sections/SkillsSection'
 import ServicesSection from '@/components/sections/ServicesSection'
@@ -15,7 +15,7 @@ export default function Home() {
                 <Section id='home' className='invisible h-0'>
                     &nbsp;
                 </Section>
-                <Hero />
+                <HomeHero />
                 <div className='mt-[400px] lg:mt-[100vh]'>
                     <Section id='about'>
                         <AboutSection />
