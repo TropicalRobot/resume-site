@@ -102,12 +102,14 @@ export default function SiteHeader({}) {
                             <a
                                 className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                 href='https://www.linkedin.com/in/ryan-griffiths-04649075/'
+                                aria-label="Visit Ryan Griffiths' LinkedIn"
                                 target='_blank'>
                                 <LinkedInIcon className='fill-black w-10 h-10' />
                             </a>
                             <a
                                 className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                 href='https://github.com/TropicalRobot'
+                                aria-label="Visit Ryan Griffiths' GitHub"
                                 target='_blank'>
                                 <GithubIcon className='fill-black w-10 h-10' />
                             </a>

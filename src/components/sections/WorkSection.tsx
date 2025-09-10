@@ -6,12 +6,12 @@ import CaseStudy from '@/components/CaseStudy'
 import { ThreeDMarquee } from '@/components/ui/shadcn-io/3d-marquee'
 
 const images = [
-    '/images/portfolio/ot/ot-screenshot.avif',
-    '/images/portfolio/chem-bros/chem-bros-screenshot.avif',
-    '/images/portfolio/cfs/cfs-screenshot.avif',
-    '/images/portfolio/beyond-dharma/beyond-dharma-screenshot.avif',
-    '/images/portfolio/ski-solutions/ski-solutions-screenshot.avif',
-    '/images/portfolio/sing-up/sing-up-screenshot.avif'
+    '/images/portfolio/ot/ot-screenshot-720.avif',
+    '/images/portfolio/chem-bros/chem-bros-screenshot-720.avif',
+    '/images/portfolio/cfs/cfs-screenshot-720.avif',
+    '/images/portfolio/beyond-dharma/beyond-dharma-screenshot-720.avif',
+    '/images/portfolio/ski-solutions/ski-solutions-screenshot-720.avif',
+    '/images/portfolio/sing-up/sing-up-screenshot-720.avif'
 ]
 
 const WorkSection: React.FC = () => {
