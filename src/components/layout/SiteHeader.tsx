@@ -10,6 +10,7 @@ import { useScrollDirection } from '@/hooks/useScrollDirection'
 import ScrollToLink from '@/components/ScrollToLink'
 import { useScrollTo } from '@/providers/ScrollProvider'
 import { usePathname, useRouter } from 'next/navigation'
+import '@/styles/components/hamburger.css'
 
 export default function SiteHeader({}) {
     const router = useRouter()

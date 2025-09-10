@@ -1,10 +1,6 @@
-@import './components/hamburger.css';
-
 @import './global/typography.css';
 
 @import 'tailwindcss';
-
-@import 'tw-animate-css';
 
 /*
   ---break---

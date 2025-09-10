@@ -27,6 +27,7 @@ const HomeHero: React.FC = () => {
                 alt='Picture of the author'
                 srcSet='/images/photoshoot-author-720.avif 720w, /images/photoshoot-author-1440.avif 1440w, /images/photoshoot-author-2400.avif 2400w'
                 sizes='100vw'
+                fetchPriority='high'
             />
 
             <motion.img
@@ -41,6 +42,7 @@ const HomeHero: React.FC = () => {
                 alt='Picture of the author'
                 srcSet='/images/photoshoot-author-trans-720.avif 720w, /images/photoshoot-author-trans-1440.avif 1440w, /images/photoshoot-author-trans-2400.avif 2400w'
                 sizes='100vw'
+                fetchPriority='high'
             />
 
             <div className='relative container h-full flex-col content-end'>
