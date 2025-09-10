@@ -9,13 +9,15 @@ const ooohBaby = Oooh_Baby({
 const notoSans = Noto_Sans({
     variable: '--font-heading',
     subsets: ['latin'],
-    display: 'swap'
+    display: 'swap',
+    weight: '900'
 })
 
 const raleway = Raleway({
     variable: '--font-body',
     subsets: ['latin'],
-    display: 'swap'
+    display: 'swap',
+    weight: ['400', '700']
 })
 
 export { ooohBaby, notoSans, raleway }

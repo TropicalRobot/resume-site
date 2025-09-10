@@ -31,13 +31,16 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <head>
-                {/* Load gtag.js */}
-                <Script
-                    async
-                    src='https://www.googletagmanager.com/gtag/js?id=G-BQJXSX1GXY'></Script>
+                {/* Preconnect for later GA requests (non-blocking) */}
+                <link rel='preconnect' href='https://www.googletagmanager.com' />
+                <link rel='preconnect' href='https://www.google-analytics.com' crossOrigin='' />
 
-                {/* Inline init script */}
-                <Script id='gtag-init' strategy='afterInteractive'>
+                {/* Load gtag lazily */}
+                <Script
+                    src='https://www.googletagmanager.com/gtag/js?id=G-BQJXSX1GXY'
+                    strategy='lazyOnload'
+                />
+                <Script id='gtag-init' strategy='lazyOnload'>
                     {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
