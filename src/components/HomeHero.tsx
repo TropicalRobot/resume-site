@@ -91,7 +91,8 @@ const HomeHero: React.FC = () => {
                         }}
                         onClick={() => scrollTo('about')}
                         role='button'
-                        aria-label='Scroll down'>
+                        aria-label='Scroll down'
+                        onFocusCapture={() => scrollTo('home')}>
                         <ScrollDownArrow className='z-50 cursor-pointer max-lg:hidden' />
                     </motion.button>
                 </div>

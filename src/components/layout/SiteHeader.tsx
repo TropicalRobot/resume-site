@@ -18,7 +18,7 @@ export default function SiteHeader({}) {
         tolerance: 100
     })
     const toggleMobileMenu = useMobileMenuToggle(forceDirection)
-    const { showMobileMenu } = useMobileMenuContext()
+    const { showMobileMenu, setShowMobileMenu } = useMobileMenuContext()
     const { scrollTo } = useScrollTo()
 
     return (
@@ -81,7 +81,9 @@ export default function SiteHeader({}) {
                             'relative max-lg:hidden max-lg:fixed lg:flex lg:items-center max-lg:h-svh max-lg:-top-[17px] max-lg:-left-[43px] max-lg:-right-[43px]',
                             !showMobileMenu && 'hidden'
                         )}>
-                        <nav className='flex max-lg:flex-col items-center justify-center gap-4 lg:gap-10 lg:mr-10 max-lg:py-10'>
+                        <nav
+                            className='flex max-lg:flex-col items-center justify-center gap-4 lg:gap-10 lg:mr-10 max-lg:py-10'
+                            onFocusCapture={() => forceDirection('up')}>
                             <ScrollToLink
                                 className='text-lg font-bold'
                                 label='About'
