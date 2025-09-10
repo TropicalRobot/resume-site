@@ -68,8 +68,8 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({ chi
 
         // Compute desired horizontal shift to center (or at least reveal) the focused element
         // offsetLeft is relative to the track
-        const itemLeft = (el as any).offsetLeft ?? 0
-        const itemWidth = (el as any).offsetWidth ?? 0
+        const itemLeft = (el as { offsetLeft: number }).offsetLeft ?? 0
+        const itemWidth = (el as { offsetWidth: number }).offsetWidth ?? 0
         const viewportWidth = sticky.clientWidth
 
         // Try to center the item; clamp to [0, maxShift]

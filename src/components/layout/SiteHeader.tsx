@@ -18,7 +18,7 @@ export default function SiteHeader({}) {
         tolerance: 100
     })
     const toggleMobileMenu = useMobileMenuToggle(forceDirection)
-    const { showMobileMenu, setShowMobileMenu } = useMobileMenuContext()
+    const { showMobileMenu } = useMobileMenuContext()
     const { scrollTo } = useScrollTo()
 
     return (
