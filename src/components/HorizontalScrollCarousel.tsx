@@ -33,10 +33,16 @@ const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({ chi
             const pad = parseFloat(getComputedStyle(track).paddingLeft || '0')
             setLeftPad(pad)
 
-            const trackWidth = track.scrollWidth // full content width
+            const trackWidth = track.scrollWidth
             const viewportWidth = sticky.clientWidth
-            const desired = Math.max(0, trackWidth - viewportWidth) // how far we need to translate to reveal all content
-            setMaxShift(desired)
+            const natural = Math.max(0, trackWidth - viewportWidth)
+
+            // Cap max horizontal shift to 90% of the track width
+            const capped = natural * 1.1
+            // If you prefer 90% of the natural shift, use:
+            // const capped = natural * 0.9
+
+            setMaxShift(capped)
         }
 
         measure()
