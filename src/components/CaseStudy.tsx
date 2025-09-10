@@ -73,7 +73,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
                             initial={{ y: -120, opacity: 0 }}
                             animate={isInView ? { y: 0, opacity: 1 } : { y: -120, opacity: 0 }}
                             transition={{ duration: 0.6, ease: 'easeOut' }}
-                            className='relative overflow-hidden rounded-sm h-full'>
+                            className='relative overflow-hidden rounded-sm h-full focus-within:outline focus-within:outline-offset-4 focus-within:outline-white'>
                             <a
                                 href={websiteUrl}
                                 target='_blank'

@@ -19,8 +19,10 @@ const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
     return (
         <>
-            <div className=' w-[600px] flex align-start max-w-[calc(100vw-40px)]'>
-                <article className='flex flex-col gap-6 p-5 lg:p-12 pt-14 lg:pt-20 rounded-xl bg-white drop-shadow-lg mb-auto relative'>
+            <div className='w-[600px] flex align-start max-w-[calc(100vw-40px)]'>
+                <article
+                    tabIndex={0}
+                    className='flex flex-col gap-6 p-5 lg:p-12 pt-14 lg:pt-20 rounded-xl bg-white drop-shadow-lg mb-auto relative'>
                     <Image
                         className='rounded-full w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] object-cover absolute -top-[40px] left-[calc(50%-40px)] z-10 bg-white'
                         src={image}
