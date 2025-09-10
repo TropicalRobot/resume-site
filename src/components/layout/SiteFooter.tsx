@@ -16,12 +16,14 @@ export default function SiteFooter({}) {
                                 <a
                                     className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                     href='https://github.com/TropicalRobot'
+                                    aria-label="Visit Ryan Griffiths' GitHub"
                                     target='_blank'>
                                     <GithubIcon className='fill-white w-10 h-10' />
                                 </a>
                                 <a
                                     className='hover:scale-120 focus:scale-120 transition-transform duration-200'
                                     href='https://www.linkedin.com/in/ryan-griffiths-04649075/'
+                                    aria-label="Visit Ryan Griffiths' LinkedIn"
                                     target='_blank'>
                                     <LinkedInIcon className='fill-white w-10 h-10' />
                                 </a>
