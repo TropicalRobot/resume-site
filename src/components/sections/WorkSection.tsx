@@ -6,12 +6,12 @@ import CaseStudy from '@/components/CaseStudy'
 import { ThreeDMarquee } from '@/components/ui/shadcn-io/3d-marquee'
 
 const images = [
-    '/images/portfolio/ot/ot-screenshot.jpg',
-    '/images/portfolio/chem-bros/chem-bros-screenshot.jpg',
-    '/images/portfolio/cfs/cfs-screenshot.jpg',
-    '/images/portfolio/beyond-dharma/beyond-dharma-screenshot.jpg',
-    '/images/portfolio/ski-solutions/ski-solutions-screenshot.jpg',
-    '/images/portfolio/sing-up/sing-up-screenshot.jpg'
+    '/images/portfolio/ot/ot-screenshot.avif',
+    '/images/portfolio/chem-bros/chem-bros-screenshot.avif',
+    '/images/portfolio/cfs/cfs-screenshot.avif',
+    '/images/portfolio/beyond-dharma/beyond-dharma-screenshot.avif',
+    '/images/portfolio/ski-solutions/ski-solutions-screenshot.avif',
+    '/images/portfolio/sing-up/sing-up-screenshot.avif'
 ]
 
 const WorkSection: React.FC = () => {
@@ -25,7 +25,7 @@ const WorkSection: React.FC = () => {
                     intro="Highlights from 11 years of shaping and shipping work at 3ev,<br>to more recent projects I've branded, designed, and built myself."
                 />
                 {/* overlay */}
-                <div className='absolute inset-0 z-10 h-full w-full bg-black/70  ' />
+                <div className='absolute inset-0 z-10 h-full w-full bg-black/80  ' />
                 <ThreeDMarquee
                     className='pointer-events-none absolute inset-0 h-full w-full overflow-hidden'
                     images={images}
