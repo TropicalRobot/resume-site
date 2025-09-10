@@ -9,8 +9,11 @@ import { motion } from 'framer-motion'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
 import ScrollToLink from '@/components/ScrollToLink'
 import { useScrollTo } from '@/providers/ScrollProvider'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function SiteHeader({}) {
+    const router = useRouter()
+    const pathname = usePathname()
     const { forceDirection, scrollDirection } = useScrollDirection({
         tolerance: 100
     })
@@ -39,7 +42,13 @@ export default function SiteHeader({}) {
                                 'w-[42px] h-[42px] rounded-full bg-[#FFB69D] overflow-hidden transition-transform duration-300 hover:border border-black',
                                 showMobileMenu && '-rotate-90'
                             )}
-                            onClick={() => scrollTo('home')}>
+                            onClick={() => {
+                                if (pathname === '/') {
+                                    scrollTo('home')
+                                } else {
+                                    router.push('/')
+                                }
+                            }}>
                             <Image
                                 src='/images/avatar.jpg'
                                 width={42}
