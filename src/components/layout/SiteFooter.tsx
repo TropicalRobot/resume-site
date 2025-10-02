@@ -40,7 +40,9 @@ export default function SiteFooter({}) {
                         </p>
                     </div>
                     <div>
-                        <nav className='flex flex-col items-end gap-2'>
+                        <nav
+                            className='flex flex-col items-end gap-2'
+                            aria-label='Footer navigation'>
                             <ScrollToLink
                                 className='text-lg font-bold'
                                 label='About'
