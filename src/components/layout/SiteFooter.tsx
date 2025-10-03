@@ -3,6 +3,7 @@
 import GithubIcon from '@/images/icons/github.svg'
 import LinkedInIcon from '@/images/icons/linkedIn.svg'
 import ScrollToLink from '@/components/ScrollToLink'
+import Link from 'next/link'
 
 export default function SiteFooter({}) {
     return (
@@ -58,6 +59,9 @@ export default function SiteFooter({}) {
                                 label='Contact'
                                 target='contact'
                             />
+                            <Link href='/photography' className='text-lg font-bold'>
+                                Photography
+                            </Link>
                         </nav>
                     </div>
                 </div>
