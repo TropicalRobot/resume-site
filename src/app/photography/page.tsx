@@ -11,8 +11,9 @@ import Slideshow from 'yet-another-react-lightbox/plugins/slideshow'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
-import { ColumnsPhotoAlbum } from 'react-photo-album'
+import { ColumnsPhotoAlbum, Photo } from 'react-photo-album'
 import 'react-photo-album/columns.css'
+import { getCloudinaryUrl } from '@/lib/cloudinary'
 
 import { photos as albums } from '@/data/photos'
 
@@ -21,15 +22,15 @@ export default function PhotographyPage() {
     const [photos, setPhotos] = useState<Photo[]>([])
     const [page, setPage] = useState(1)
 
-    type Photo = { src: string; width: number; height: number }
+    type CloudinaryPhoto = { src: string; width: number; height: number }
     type Album = {
         album: string
-        photos: Photo[]
+        photos: CloudinaryPhoto[]
         sub_album?: Album[]
     }
 
-    function flattenPhotos(albums: Album[]): Photo[] {
-        let result: Photo[] = []
+    function flattenPhotos(albums: Album[]): CloudinaryPhoto[] {
+        let result: CloudinaryPhoto[] = []
         for (const album of albums) {
             if (album.photos && album.photos.length) {
                 result = result.concat(album.photos)
@@ -40,26 +41,82 @@ export default function PhotographyPage() {
         }
         return result
     }
-    // Flatten all photos from albums
-    const allPhotos = flattenPhotos(albums)
 
-    // Page size logic: first page 10, then 20, then 20, etc.
-    const getPageSize = (page: number) => (page === 1 ? 0 : 20)
-
-    const fetchPhotos = async (): Promise<typeof allPhotos | null> => {
-        const size = getPageSize(page)
-        const start = photos.length
-        const nextPhotos = allPhotos.slice(start, start + size)
-
-        setPhotos((prevPhotos) => [...prevPhotos, ...nextPhotos])
-        setPage((prevPage) => prevPage + 1)
-        return nextPhotos.length ? nextPhotos : null
+    // Convert Cloudinary photos to optimized Photo album format
+    function getOptimizedPhotos(photos: CloudinaryPhoto[]): Photo[] {
+        return photos.map((photo) => ({
+            src: getCloudinaryUrl(photo.src, 1200), // Main image for gallery
+            width: photo.width,
+            height: photo.height,
+            srcSet: [
+                {
+                    src: getCloudinaryUrl(photo.src, 400),
+                    width: 400,
+                    height: Math.round((photo.height * 400) / photo.width)
+                },
+                {
+                    src: getCloudinaryUrl(photo.src, 800),
+                    width: 800,
+                    height: Math.round((photo.height * 800) / photo.width)
+                },
+                {
+                    src: getCloudinaryUrl(photo.src, 1200),
+                    width: 1200,
+                    height: Math.round((photo.height * 1200) / photo.width)
+                },
+                {
+                    src: getCloudinaryUrl(photo.src, 1600),
+                    width: 1600,
+                    height: Math.round((photo.height * 1600) / photo.width)
+                }
+            ]
+        }))
     }
 
+    // Flatten all photos from albums (safe default)
+    const allPhotos = albums ? flattenPhotos(albums) : []
+
+    // Page size logic: first page 10, then 20, then 20, etc.
+    const getPageSize = (page: number) => (page === 1 ? 10 : 20)
+
+    const fetchPhotos = async (): Promise<Photo[] | null> => {
+        const size = getPageSize(page)
+        const start = photos.length
+        const nextCloudinaryPhotos = allPhotos.slice(start, start + size)
+        const nextOptimizedPhotos = getOptimizedPhotos(nextCloudinaryPhotos)
+
+        setPhotos((prevPhotos) => [...prevPhotos, ...nextOptimizedPhotos])
+        setPage((prevPage) => prevPage + 1)
+        return nextOptimizedPhotos.length ? nextOptimizedPhotos : null
+    }
+
+    // useEffect runs regardless - but only fetches if we have photos
     useEffect(() => {
-        fetchPhotos() // Initial load
+        if (albums && albums.length > 0) {
+            fetchPhotos() // Initial load only if we have data
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    // Early return AFTER hooks
+    if (!albums || albums.length === 0) {
+        return (
+            <div className='flex items-center justify-center min-h-screen'>
+                <p>No photos available. Please generate photos data.</p>
+            </div>
+        )
+    }
+
+    // Create lightbox slides with high-res images
+    const lightboxSlides = photos.map((photo) => ({
+        src: getCloudinaryUrl(
+            // Extract public_id from the optimized src
+            photo.src.split('/').pop()?.split('?')[0] || photo.src,
+            2000 // High resolution for lightbox
+        ),
+        width: photo.width,
+        height: photo.height
+    }))
 
     return (
         <>
@@ -76,7 +133,7 @@ export default function PhotographyPage() {
                         </InfiniteScroll>
 
                         <Lightbox
-                            slides={photos}
+                            slides={lightboxSlides}
                             open={lightboxIndex >= 0}
                             index={lightboxIndex}
                             close={() => setLightboxIndex(-1)}
