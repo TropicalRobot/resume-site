@@ -4,9 +4,9 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "prebuild": "node scripts/generatePhotos.js",
         "dev": "next dev",
-        "build": "npm run generate-photos && next build",
-        "generate-photos": "node scripts/generatePhotos.js",
+        "build": "next build",
         "start": "next start",
         "lint": "next lint",
         "gen:photos": "node scripts/generatePhotos.js"
