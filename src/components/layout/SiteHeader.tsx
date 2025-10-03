@@ -84,7 +84,8 @@ export default function SiteHeader({}) {
                         )}>
                         <nav
                             className='flex max-lg:flex-col items-center justify-center gap-4 lg:gap-10 lg:mr-10 max-lg:py-10'
-                            onFocusCapture={() => forceDirection('up')}>
+                            onFocusCapture={() => forceDirection('up')}
+                            aria-label='Primary navigation'>
                             <ScrollToLink
                                 className='text-lg font-bold'
                                 label='About'
