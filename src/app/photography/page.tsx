@@ -18,6 +18,8 @@ import { getCloudinaryUrl } from '@/lib/cloudinary'
 import { photos as albums } from '@/data/photos'
 
 export default function PhotographyPage() {
+    const [windowWidth, setWindowWidth] = useState(0)
+
     const [lightboxIndex, setLightboxIndex] = useState(-1)
     const [photos, setPhotos] = useState<Photo[]>([])
     const [page, setPage] = useState(1)
@@ -98,6 +100,16 @@ export default function PhotographyPage() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth)
+
+        // Set initial width
+        setWindowWidth(window.innerWidth)
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
     // Early return AFTER hooks
     if (!albums || albums.length === 0) {
         return (
@@ -118,6 +130,23 @@ export default function PhotographyPage() {
         height: photo.height
     }))
 
+    // Dynamic row constraints based on screen size
+    const getRowConstraints = () => {
+        if (windowWidth < 640) {
+            // Mobile: 1-2 photos per row
+            return { minPhotos: 1, maxPhotos: 2 }
+        } else if (windowWidth < 768) {
+            // Small tablet: 2-3 photos per row
+            return { minPhotos: 2, maxPhotos: 3 }
+        } else if (windowWidth < 1024) {
+            // Tablet: 3-4 photos per row
+            return { minPhotos: 3, maxPhotos: 4 }
+        } else {
+            // Desktop: 3-5 photos per row
+            return { minPhotos: 3, maxPhotos: 5 }
+        }
+    }
+
     return (
         <>
             <main>
@@ -129,13 +158,7 @@ export default function PhotographyPage() {
                         <InfiniteScroll
                             fetch={fetchPhotos}
                             onClick={({ index }) => setLightboxIndex(index)}>
-                            <RowsPhotoAlbum
-                                photos={photos}
-                                rowConstraints={{
-                                    minPhotos: 3,
-                                    maxPhotos: 5
-                                }}
-                            />
+                            <RowsPhotoAlbum photos={photos} rowConstraints={getRowConstraints()} />
                         </InfiniteScroll>
 
                         <Lightbox
