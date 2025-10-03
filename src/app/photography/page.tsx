@@ -11,8 +11,8 @@ import Slideshow from 'yet-another-react-lightbox/plugins/slideshow'
 import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/plugins/thumbnails.css'
-import { ColumnsPhotoAlbum, Photo } from 'react-photo-album'
-import 'react-photo-album/columns.css'
+import { RowsPhotoAlbum, Photo } from 'react-photo-album'
+import 'react-photo-album/rows.css'
 import { getCloudinaryUrl } from '@/lib/cloudinary'
 
 import { photos as albums } from '@/data/photos'
@@ -129,7 +129,13 @@ export default function PhotographyPage() {
                         <InfiniteScroll
                             fetch={fetchPhotos}
                             onClick={({ index }) => setLightboxIndex(index)}>
-                            <ColumnsPhotoAlbum photos={photos} columns={4} />
+                            <RowsPhotoAlbum
+                                photos={photos}
+                                rowConstraints={{
+                                    minPhotos: 3,
+                                    maxPhotos: 5
+                                }}
+                            />
                         </InfiniteScroll>
 
                         <Lightbox
