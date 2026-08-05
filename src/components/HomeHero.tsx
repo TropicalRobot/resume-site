@@ -88,7 +88,9 @@ const HomeHero: React.FC = () => {
                             y: { duration: 0.6, ease: 'easeOut', delay: 0.4 },
                             opacity: { duration: 0.6, ease: 'easeOut', delay: 0.5 }
                         }}>
-                        <p className='text-xl ml-2'>Independent freelance web consultant</p>
+                        <p className='text-md lg:text-xl ml-2'>
+                            Independent freelance web consultant
+                        </p>
                     </motion.div>
                 </div>
                 <div className='absolute bottom-14 left-1/2 right-1/2'>
