@@ -29,8 +29,8 @@ const SkillsSection: React.FC = () => {
         { image: '/images/logos/magento-logo.svg', heading: 'Magento' },
         { image: '/images/logos/git-logo.svg', heading: 'Git' },
         { image: '/images/logos/docker-logo.svg', heading: 'Docker' },
-        { image: '/images/logos/google-cloud-logo.svg', heading: 'Google Cloud' },
-        { image: '/images/logos/github-copilot-icon.webp', heading: 'Github Copilot' }
+        { image: '/images/logos/codex-icon.svg', heading: 'Codex' },
+        { image: '/images/logos/claude-code-icon.webp', heading: 'Claude Code' }
     ]
 
     const containerVariants: Variants = {
