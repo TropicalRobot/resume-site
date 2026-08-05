@@ -22,7 +22,7 @@ const WorkSection: React.FC = () => {
                     className='container mb-0 z-20 py-20 lg:py-50'
                     heading='My Work'
                     justify='center'
-                    intro="Highlights from 11 years of shaping and shipping work at 3ev,<br>to more recent projects I've branded, designed, and built myself."
+                    intro="Highlights from 13 years of shaping and shipping work at 3ev,<br>to more recent projects I've branded, designed, and built myself."
                 />
                 {/* overlay */}
                 <div className='absolute inset-0 z-10 h-full w-full bg-black/80  ' />
@@ -118,7 +118,7 @@ const WorkSection: React.FC = () => {
                             </p>
                             <h3>My Role</h3>
                             <p>
-                                Over 11 years, I was deeply involved in the ongoing development and
+                                Over 13 years, I was deeply involved in the ongoing development and
                                 evolution of the Oliver&apos;s Travels website. I initially worked
                                 on building and refining a custom Laravel booking system, delivering
                                 features that streamlined internal processes and improved the

@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
             heading='About Me'
             intro='Creative and empathetic developer with a passion for thoughtful UX, accessible front-ends, and building things that matter.'>
             <p>
-                I&apos;m a seasoned Full Stack Developer with 11 years of experience, progressing
+                I&apos;m a seasoned Full Stack Developer with 13 years of experience, progressing
                 from Junior Developer to Technical Director at a digital agency. Throughout my
                 career, I&apos;ve maintained a hands-on coding approach even while taking on
                 increasing leadership responsibilities.
@@ -24,8 +24,10 @@ const AboutSection: React.FC = () => {
             <p>
                 I&apos;ve led technical teams, delivered complex digital projects, and collaborated
                 with clients across the arts, travel, charity, and ethical sectors. After an
-                intentional career break to travel and gain fresh perspectives, I&apos;m now
-                preparing for the next chapter in my professional journey.
+                intentional career break to travel and gain fresh perspectives, I now work
+                independently as a freelance web developer and digital consultant, helping clients
+                improve complex websites through thoughtful front-end development, UX and technical
+                guidance.
             </p>
             <p>
                 I value simplicity, collaboration, and doing great work for good people. Whether
