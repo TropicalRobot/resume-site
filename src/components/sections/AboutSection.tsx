@@ -24,8 +24,10 @@ const AboutSection: React.FC = () => {
             <p>
                 I&apos;ve led technical teams, delivered complex digital projects, and collaborated
                 with clients across the arts, travel, charity, and ethical sectors. After an
-                intentional career break to travel and gain fresh perspectives, I&apos;m now
-                preparing for the next chapter in my professional journey.
+                intentional career break to travel and gain fresh perspectives, I now work
+                independently as a freelance web developer and digital consultant, helping clients
+                improve complex websites through thoughtful front-end development, UX and technical
+                guidance.
             </p>
             <p>
                 I value simplicity, collaboration, and doing great work for good people. Whether

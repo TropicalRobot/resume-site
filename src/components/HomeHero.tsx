@@ -46,7 +46,7 @@ const HomeHero: React.FC = () => {
             />
 
             <div className='relative container h-full flex-col content-end'>
-                <div className='pb-8 lg:pb-32 flex-col'>
+                <div className='pb-8 lg:pb-40 flex-col'>
                     <div className='overflow-hidden inline-block pr-2 w-full'>
                         <motion.h1
                             initial={{ y: '100%', opacity: 0 }}
@@ -68,7 +68,7 @@ const HomeHero: React.FC = () => {
                                 opacity: { duration: 0.6, ease: 'easeOut', delay: 0.3 }
                             }}
                             className='uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70'>
-                            Full Stack
+                            Front-End
                         </motion.h2>
                         <motion.h2
                             initial={{ y: '120%', opacity: 0 }}
@@ -77,11 +77,19 @@ const HomeHero: React.FC = () => {
                                 y: { duration: 0.6, ease: 'easeOut', delay: 0.1 },
                                 opacity: { duration: 0.6, ease: 'easeOut', delay: 0.3 }
                             }}
-                            className='z-10 relative uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70 mb-4 lg:mb-10'>
+                            className='z-10 relative uppercase font-heading text-heading-0 lg:text-tablet-heading-0 xl:text-desktop-heading-0 font-black text-white/70 mb-4'>
                             Web Developer
                         </motion.h2>
                     </div>
-                    {/* <p className="text-xl mt-2 ml-2">Based in Brighton, UK</p> */}
+                    <motion.div
+                        initial={{ y: '120%', opacity: 0 }}
+                        animate={{ y: '0%', opacity: 1 }}
+                        transition={{
+                            y: { duration: 0.6, ease: 'easeOut', delay: 0.4 },
+                            opacity: { duration: 0.6, ease: 'easeOut', delay: 0.5 }
+                        }}>
+                        <p className='text-xl ml-2'>Independent freelance web consultant</p>
+                    </motion.div>
                 </div>
                 <div className='absolute bottom-14 left-1/2 right-1/2'>
                     <motion.button
